@@ -31,6 +31,9 @@ export function AppShell({ user, title, actions, children }) {
           <p className="truncate text-ink">{user.full_name || user.email}</p>
           <p className="truncate text-muted">{user.region ? `${user.region} Region` : user.email}</p>
           <SignOutButton className="mt-3 text-ink-2 hover:text-ink" />
+          <Link href="/download" className="mt-2 block text-ink-2 hover:text-ink">
+            Get the mobile app
+          </Link>
           <BuiltBy className="mt-4 block text-[12px] text-muted" />
         </div>
       </aside>

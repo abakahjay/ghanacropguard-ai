@@ -44,6 +44,9 @@ export function SiteNav({ signedIn }) {
           <Link href="/limitations" className="hidden text-ink-2 transition-colors hover:text-ink sm:inline">
             Limits
           </Link>
+          <Link href="/download" className="hidden text-ink-2 transition-colors hover:text-ink md:inline">
+            Get the app
+          </Link>
           {signedIn ? (
             <Link href="/app" className="btn btn-accent btn-sm">
               Open app
@@ -79,6 +82,9 @@ export function QuietFooter() {
           </Link>
           <Link href="/app" className="text-ink hover:text-accent">
             App
+          </Link>
+          <Link href="/download" className="text-ink hover:text-accent">
+            Get the app
           </Link>
           <a href="https://doi.org/10.17632/bwh3zbpkpv.1" className="text-ink hover:text-accent" rel="noopener">
             Dataset

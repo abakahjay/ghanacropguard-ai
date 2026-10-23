@@ -5,6 +5,7 @@ import { AuthProvider, Protected } from "@/lib/auth";
 import { AdminPage } from "@/pages/Admin";
 import { AppHome } from "@/pages/AppHome";
 import { CropPage, CropsPage } from "@/pages/Crops";
+import { DownloadPage } from "@/pages/Download";
 import { ErrorPage, NotFound } from "@/pages/Errors";
 import { HistoryPage } from "@/pages/History";
 import { Landing } from "@/pages/Landing";
@@ -45,6 +46,7 @@ export function App() {
           <Route path="/forgot-password" component={ForgotPasswordPage} />
           <Route path="/reset-password" component={ResetPasswordPage} />
           <Route path="/auth/google" component={GoogleCallbackPage} />
+          <Route path="/download" component={DownloadPage} />
           <Route path="/crops" component={CropsPage} />
           <Route path="/crops/:crop" component={CropPage} />
           <Route path="/limitations" component={LimitationsPage} />
