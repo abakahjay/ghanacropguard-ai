@@ -1,0 +1,189 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "model",
+      "type": "pickString",
+      "description": "Architecture",
+      "options": [
+        "mobilenetv3",
+        "efficientnet_b0",
+        "convnext_tiny"
+      ],
+      "default": "mobilenetv3"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "ML ALL: full pipeline (resumable)",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage pipeline",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 1: Setup Python env",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage setup",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 2: Run ML tests",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage test",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 3: Download CCMT dataset",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage download",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 3b: Probe dataset source",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage probe",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 3c: Complete download from ZIP",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage download-zip",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 4: Prepare + split dataset",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage prepare",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 5: Benchmark CPU speed",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage benchmark",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 6: Smoke-test training",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage smoke",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 7: Train MobileNetV3",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage train -Model mobilenetv3",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 8: Train EfficientNet-B0",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage train -Model efficientnet_b0",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 9: Train ConvNeXt-Tiny (best)",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage train -Model convnext_tiny",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 10: Evaluate on test set",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage evaluate -Model ${input:model}",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 11: Export ONNX bundle",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage export -Model ${input:model} -Version 1.0.0",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 12: Compare models",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage compare",
+      "problemMatcher": []
+    },
+    {
+      "label": "ML 13: Write docs/RESULTS.md from metrics",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ml.ps1 -Stage results",
+      "problemMatcher": []
+    },
+    {
+      "label": "API 1: Install FullBackendd",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage api-setup",
+      "problemMatcher": []
+    },
+    {
+      "label": "API 1b: Copy trained model into FullBackendd",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage api-model",
+      "problemMatcher": []
+    },
+    {
+      "label": "API 2: Create admin account",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage api-admin",
+      "problemMatcher": []
+    },
+    {
+      "label": "API 3: Run FullBackendd (port 7004)",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage api",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "API 4: Run CropGuard API tests",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage api-test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Web 1: Install",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage web-setup",
+      "problemMatcher": []
+    },
+    {
+      "label": "Web 2: Run web app (port 3000)",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage web",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Web 3: Production build + start",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage web-prod",
+      "problemMatcher": []
+    },
+    {
+      "label": "Web 4: End-to-end tests",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage web-e2e",
+      "problemMatcher": []
+    },
+    {
+      "label": "Mobile 1: Install",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage mobile-setup",
+      "problemMatcher": []
+    },
+    {
+      "label": "Mobile 2: Start Expo",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage mobile",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Mobile 3: Tests",
+      "type": "shell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 -Stage mobile-test",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Data and training outputs (large; reproducible from scripts)
+ml/data/
+ml/runs/*/best.pt
+logs/
+
+# Model bundles: keep meta.json in git, ONNX via release/LFS
+artifacts/models/**/*.onnx
+
+# Node / web / mobile
+node_modules/
+out/
+dist/
+.expo/
+web-build/
+*.apk
+*.aab
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.taste-skill/
+.sync/
+*.db
+web/e2e/.results/
