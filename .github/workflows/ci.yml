@@ -1,0 +1,33 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  ml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r ml/requirements.txt -e ml
+      - run: ruff check ml
+      - run: cd ml && pytest -q
+  # The API is FullBackendd (separate repo); its CropGuard tests are `npm run test:cropguard` there.
+  web:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: web } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: npm ci
+      - run: npx eslint . && npm run build
+        env: { VITE_API_URL: "https://fullbackendd.onrender.com" }
+  mobile:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: mobile } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: npm ci --legacy-peer-deps
+      - run: npx eslint . && npx jest && npx expo export --platform android --platform ios --output-dir /tmp/bundle
