@@ -1,0 +1,15 @@
+# Reduced configuration: verifies the pipeline end to end in minutes (NOT for reporting).
+run_name: smoke
+arch: mobilenetv3_large_100.ra_in1k
+pretrained: true
+prepared_dir: data/prepared
+output_dir: runs
+batch_size: 16
+epochs: 2
+head_warmup_epochs: 1
+limit_per_class: 12
+lr: 0.0005
+head_lr: 0.003
+patience: 1
+seed: 42
+workers: 2

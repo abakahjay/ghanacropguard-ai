@@ -1,0 +1,21 @@
+# Highest-accuracy candidate: ConvNeXt-Tiny pretrained on ImageNet-22k, fine-tuned on 1k.
+run_name: convnext_tiny
+arch: convnext_tiny.fb_in22k_ft_in1k
+pretrained: true
+prepared_dir: data/prepared
+output_dir: runs
+image_size: 224
+resize_size: 256
+batch_size: 32
+epochs: 4   # measured 81 min/epoch on the i7-1270P CPU: 1 head warm-up + 3 full fine-tune epochs
+head_warmup_epochs: 1
+lr: 0.0001
+head_lr: 0.001
+weight_decay: 0.05
+label_smoothing: 0.1
+drop_rate: 0.2
+patience: 2
+time_budget_minutes: 330
+seed: 42
+threads: 10
+workers: 4

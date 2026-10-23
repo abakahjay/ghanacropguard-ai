@@ -1,0 +1,21 @@
+# Lightweight model for fast CPU inference (server + on-device).
+run_name: mobilenetv3_large
+arch: mobilenetv3_large_100.ra_in1k
+pretrained: true
+prepared_dir: data/prepared
+output_dir: runs
+image_size: 224
+resize_size: 256
+batch_size: 48
+epochs: 12
+head_warmup_epochs: 1
+lr: 0.0006
+head_lr: 0.003
+weight_decay: 0.02
+label_smoothing: 0.1
+drop_rate: 0.2
+patience: 3
+time_budget_minutes: 150
+seed: 42
+threads: 10
+workers: 4

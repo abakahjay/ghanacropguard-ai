@@ -1,0 +1,21 @@
+# Comparative baseline.
+run_name: efficientnet_b0
+arch: efficientnet_b0.ra_in1k
+pretrained: true
+prepared_dir: data/prepared
+output_dir: runs
+image_size: 224
+resize_size: 256
+batch_size: 32
+epochs: 8   # measured 24 min/epoch on the i7-1270P CPU
+head_warmup_epochs: 1
+lr: 0.0005
+head_lr: 0.0025
+weight_decay: 0.02
+label_smoothing: 0.1
+drop_rate: 0.25
+patience: 3
+time_budget_minutes: 200
+seed: 42
+threads: 10
+workers: 4
