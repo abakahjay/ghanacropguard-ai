@@ -1,0 +1,141 @@
+{
+  "model": "mobilenetv3_large_100-1.0.0",
+  "samples": [
+    {
+      "file": "/samples/cassava_mosaic.jpg",
+      "width": 400,
+      "height": 400,
+      "true_label": {
+        "class_key": "cassava_mosaic",
+        "display_name": "Mosaic",
+        "crop": "cassava"
+      },
+      "source_file": "Cassava/mosaic/mosaic395_.jpg",
+      "model": "mobilenetv3_large_100-1.0.0",
+      "top3": [
+        {
+          "class_key": "cassava_mosaic",
+          "display_name": "Mosaic",
+          "crop": "cassava",
+          "confidence": 0.8863
+        },
+        {
+          "class_key": "cassava_green_mite",
+          "display_name": "Green mite",
+          "crop": "cassava",
+          "confidence": 0.0573
+        },
+        {
+          "class_key": "maize_grasshopper",
+          "display_name": "Grasshopper",
+          "crop": "maize",
+          "confidence": 0.0095
+        }
+      ],
+      "correct": true,
+      "credit": "Photo: CCMT dataset (Mensah et al., 2023), Mendeley Data, doi:10.17632/bwh3zbpkpv.1, CC BY 4.0"
+    },
+    {
+      "file": "/samples/maize_fall_armyworm.jpg",
+      "width": 400,
+      "height": 400,
+      "true_label": {
+        "class_key": "maize_fall_armyworm",
+        "display_name": "Fall armyworm",
+        "crop": "maize"
+      },
+      "source_file": "Maize/fall armyworm/fall armyworm166_.jpg",
+      "model": "mobilenetv3_large_100-1.0.0",
+      "top3": [
+        {
+          "class_key": "maize_fall_armyworm",
+          "display_name": "Fall armyworm",
+          "crop": "maize",
+          "confidence": 0.983
+        },
+        {
+          "class_key": "maize_streak_virus",
+          "display_name": "Streak virus",
+          "crop": "maize",
+          "confidence": 0.0055
+        },
+        {
+          "class_key": "cashew_leaf_miner",
+          "display_name": "Leaf miner",
+          "crop": "cashew",
+          "confidence": 0.0015
+        }
+      ],
+      "correct": true,
+      "credit": "Photo: CCMT dataset (Mensah et al., 2023), Mendeley Data, doi:10.17632/bwh3zbpkpv.1, CC BY 4.0"
+    },
+    {
+      "file": "/samples/cashew_anthracnose.jpg",
+      "width": 400,
+      "height": 400,
+      "true_label": {
+        "class_key": "cashew_anthracnose",
+        "display_name": "Anthracnose",
+        "crop": "cashew"
+      },
+      "source_file": "Cashew/anthracnose/anthracnose673_.jpg",
+      "model": "mobilenetv3_large_100-1.0.0",
+      "top3": [
+        {
+          "class_key": "cashew_anthracnose",
+          "display_name": "Anthracnose",
+          "crop": "cashew",
+          "confidence": 0.9395
+        },
+        {
+          "class_key": "maize_fall_armyworm",
+          "display_name": "Fall armyworm",
+          "crop": "maize",
+          "confidence": 0.0098
+        },
+        {
+          "class_key": "tomato_septoria_leaf_spot",
+          "display_name": "Septoria leaf spot",
+          "crop": "tomato",
+          "confidence": 0.0079
+        }
+      ],
+      "correct": true,
+      "credit": "Photo: CCMT dataset (Mensah et al., 2023), Mendeley Data, doi:10.17632/bwh3zbpkpv.1, CC BY 4.0"
+    },
+    {
+      "file": "/samples/tomato_leaf_curl.jpg",
+      "width": 400,
+      "height": 400,
+      "true_label": {
+        "class_key": "tomato_leaf_curl",
+        "display_name": "Leaf curl",
+        "crop": "tomato"
+      },
+      "source_file": "Tomato/leaf curl/leaf curl149_.jpg",
+      "model": "mobilenetv3_large_100-1.0.0",
+      "top3": [
+        {
+          "class_key": "tomato_leaf_curl",
+          "display_name": "Leaf curl",
+          "crop": "tomato",
+          "confidence": 0.9348
+        },
+        {
+          "class_key": "tomato_septoria_leaf_spot",
+          "display_name": "Septoria leaf spot",
+          "crop": "tomato",
+          "confidence": 0.0457
+        },
+        {
+          "class_key": "tomato_leaf_blight",
+          "display_name": "Leaf blight",
+          "crop": "tomato",
+          "confidence": 0.0058
+        }
+      ],
+      "correct": true,
+      "credit": "Photo: CCMT dataset (Mensah et al., 2023), Mendeley Data, doi:10.17632/bwh3zbpkpv.1, CC BY 4.0"
+    }
+  ]
+}

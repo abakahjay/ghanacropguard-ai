@@ -1,0 +1,156 @@
+{
+  "source": "Mendeley Data bwh3zbpkpv v1, raw images (counts from the download provenance)",
+  "cleaned": false,
+  "total": 25220,
+  "crops": [
+    {
+      "crop": "cashew",
+      "name": "Cashew",
+      "images": 6549,
+      "classes": [
+        {
+          "key": "cashew_anthracnose",
+          "name": "Anthracnose",
+          "images": 1729
+        },
+        {
+          "key": "cashew_red_rust",
+          "name": "Red rust",
+          "images": 1682
+        },
+        {
+          "key": "cashew_leaf_miner",
+          "name": "Leaf miner",
+          "images": 1378
+        },
+        {
+          "key": "cashew_healthy",
+          "name": "Healthy",
+          "images": 1368
+        },
+        {
+          "key": "cashew_gummosis",
+          "name": "Gummosis",
+          "images": 392
+        }
+      ]
+    },
+    {
+      "crop": "cassava",
+      "name": "Cassava",
+      "images": 7508,
+      "classes": [
+        {
+          "key": "cassava_bacterial_blight",
+          "name": "Bacterial blight",
+          "images": 2614
+        },
+        {
+          "key": "cassava_brown_spot",
+          "name": "Brown spot",
+          "images": 1481
+        },
+        {
+          "key": "cassava_mosaic",
+          "name": "Mosaic",
+          "images": 1205
+        },
+        {
+          "key": "cassava_healthy",
+          "name": "Healthy",
+          "images": 1193
+        },
+        {
+          "key": "cassava_green_mite",
+          "name": "Green mite",
+          "images": 1015
+        }
+      ]
+    },
+    {
+      "crop": "maize",
+      "name": "Maize",
+      "images": 5358,
+      "classes": [
+        {
+          "key": "maize_leaf_spot",
+          "name": "Leaf spot",
+          "images": 1259
+        },
+        {
+          "key": "maize_leaf_blight",
+          "name": "Leaf blight",
+          "images": 1006
+        },
+        {
+          "key": "maize_streak_virus",
+          "name": "Streak virus",
+          "images": 979
+        },
+        {
+          "key": "maize_leaf_beetle",
+          "name": "Leaf beetle",
+          "images": 948
+        },
+        {
+          "key": "maize_grasshopper",
+          "name": "Grasshopper",
+          "images": 673
+        },
+        {
+          "key": "maize_fall_armyworm",
+          "name": "Fall armyworm",
+          "images": 285
+        },
+        {
+          "key": "maize_healthy",
+          "name": "Healthy",
+          "images": 208
+        }
+      ]
+    },
+    {
+      "crop": "tomato",
+      "name": "Tomato",
+      "images": 5805,
+      "classes": [
+        {
+          "key": "tomato_septoria_leaf_spot",
+          "name": "Septoria leaf spot",
+          "images": 2743
+        },
+        {
+          "key": "tomato_leaf_blight",
+          "name": "Leaf blight",
+          "images": 1301
+        },
+        {
+          "key": "tomato_verticillium_wilt",
+          "name": "Verticillium wilt",
+          "images": 773
+        },
+        {
+          "key": "tomato_leaf_curl",
+          "name": "Leaf curl",
+          "images": 518
+        },
+        {
+          "key": "tomato_healthy",
+          "name": "Healthy",
+          "images": 470
+        }
+      ]
+    }
+  ],
+  "after_cleaning": {
+    "images_kept": 24071,
+    "split_totals": {
+      "train": 16839,
+      "val": 3617,
+      "test": 3615
+    },
+    "corrupt": 94,
+    "exact_duplicates_removed": 604,
+    "label_conflicts_removed": 451
+  }
+}
