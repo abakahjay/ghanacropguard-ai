@@ -14,7 +14,10 @@ All errors use one shape: `{"detail": {"code": "...", "message": "...", "fields"
 | GET | `/api/v1/cropguard/policy` | public | Policy |
 | POST | `/api/v1/cropguard/auth/register` | public | Register |
 | POST | `/api/v1/cropguard/auth/login` | public | Login |
-| GET | `/api/v1/cropguard/auth/me` | user | Me |
+| POST | `/api/v1/cropguard/auth/forgot-password` | public | Email a reset link `{ email, redirect_uri? }`; same answer whether or not the account exists |
+| POST | `/api/v1/cropguard/auth/reset-password` | public | `{ email, token, new_password }` from the link `<redirect_uri>#token=&email=`; signs out every session |
+| GET | `/api/v1/auth/google?app=cropguard&redirect_uri=&consent=1` | public | Google sign-in; returns to `redirect_uri#token=` (or `#error=`). `consent=1` only after the age/terms boxes are ticked |
+| GET | `/api/v1/cropguard/auth/me` | user | Me (includes `has_password`, `google_linked`) |
 | DELETE | `/api/v1/cropguard/auth/me` | user | Delete Account |
 | PATCH | `/api/v1/cropguard/auth/me` | user | Update Me |
 | POST | `/api/v1/cropguard/auth/me/password` | user | Change Password |

@@ -10,6 +10,7 @@
 
 ## API environment variables (FullBackendd `.env` / Render → Environment)
 Shared with the other apps: `MONGO_URI`, `JWT_SECRET` (CropGuard tokens are signed with it but carry `app: "cropguard"`).
+CropGuard sign-in: set `CROPGUARD_CLIENT_URL=https://ghanacropguard-web.onrender.com` (the web app's URL). Google sign-in and password-reset links may only point there or at hosts on `ALLOWED_REDIRECT_DOMAINS`, and reset links default to `<CROPGUARD_CLIENT_URL>/reset-password`. Reset emails use FullBackendd's mail transport (`MAIL_RELAY_URL`/`MAIL_RELAY_SECRET` on Render, which blocks SMTP). `CROPGUARD_ADMIN_EMAILS` (comma list) become admins when they sign in with Google.
 CropGuard (all optional): `CROPGUARD_MODEL_DIR` (default `data/cropguard/model`), `CROPGUARD_TOKEN_MINUTES` (720), `CROPGUARD_STORE_IMAGES` (true), `CROPGUARD_RETENTION_DAYS` (90; 0 = keep until the user deletes), `CROPGUARD_MAX_UPLOAD_MB` (8), `CROPGUARD_MAX_IMAGE_PIXELS`, `CROPGUARD_RATE_LIMIT_PREDICTIONS_PER_MINUTE` (20), `CROPGUARD_RATE_LIMIT_AUTH_PER_MINUTE` (10), `CROPGUARD_LOW_CONFIDENCE_THRESHOLD` (0.60), `CROPGUARD_SMALL_MARGIN_THRESHOLD`, `CROPGUARD_MIN_AGE` (16), `CROPGUARD_TERMS_VERSION`, `CROPGUARD_ORT_THREADS`, `CROPGUARD_BOOTSTRAP_ADMIN_EMAIL` / `_PASSWORD` (remove after first start). An admin can also be made with `node scripts/cropguardCreateAdmin.js <email>` in FullBackendd.
 
 ## Model updates
