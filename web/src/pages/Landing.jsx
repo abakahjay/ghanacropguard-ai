@@ -47,12 +47,14 @@ export function Landing() {
                 <span className="block h-[0.12em] w-[30%] rounded-full bg-[#5d6b60]" />
                 <span className="block h-[0.12em] w-[12%] rounded-full bg-[#5d6b60]" />
               </span>
-            </Slot>{" "}
-            by confidence, says when it is unsure, and lists first steps{" "}
+            </Slot>
+            , says when it is unsure, and lists first steps{" "}
             <Slot>
-              <span className="text-[0.5em] font-medium text-accent">✓</span>
+              <svg viewBox="0 0 24 24" className="h-[0.55em] w-[0.55em] text-accent" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
             </Slot>{" "}
-            you can take today, with your extension officer as the next call.
+            to take today.
           </Reveal>
           <Reveal delay={90} className="mt-[72px] grid gap-5 lg:ml-[50%] lg:max-w-[46ch]">
             <p className="text-[18px] text-ink-2">
