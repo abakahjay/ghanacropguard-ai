@@ -25,7 +25,7 @@ export function SitePhoto({ photo, sizes = "100vw", priority = false, className 
           href={photo.source}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-2 right-2 max-w-[calc(100%-16px)] truncate rounded-[3px] bg-black/55 px-2 py-0.5 text-[11px] text-white/85 hover:text-white"
+          className="absolute bottom-3 right-3 max-w-[calc(100%-24px)] truncate rounded-[3px] bg-black/60 px-2 py-0.5 text-[13px] text-white/90 hover:text-white"
         >
           {credit(photo)} (resized)
         </a>

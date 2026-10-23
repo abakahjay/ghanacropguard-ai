@@ -29,22 +29,22 @@ export function SiteNav({ signedIn }) {
   signedIn = signedIn ?? Boolean(user);
   return (
     <header className="relative z-20">
-      <nav aria-label="Main" className="mx-auto flex h-16 items-center justify-between px-[var(--margin)]">
+      <nav aria-label="Main" className="mx-auto flex h-16 items-center justify-between gap-4 px-[var(--margin)]">
         <Link href="/" aria-label="GhanaCropGuard AI home" className="shrink-0">
           {/* phones: the mark alone, so the links keep room */}
-          <Wordmark className="max-[420px]:[&>span:last-child]:hidden" />
+          <Wordmark className="max-sm:[&>span:last-child]:hidden" />
         </Link>
-        <div className="flex items-center gap-4 whitespace-nowrap text-[15px] sm:gap-7">
+        <div className="flex items-center gap-4 whitespace-nowrap text-[15px] sm:gap-5 lg:gap-7">
           <Link href="/crops" className="text-ink-2 transition-colors hover:text-ink">
             Crops
           </Link>
-          <a href="/#how" className="hidden text-ink-2 transition-colors hover:text-ink sm:inline">
+          <a href="/#how" className="hidden text-ink-2 transition-colors hover:text-ink lg:inline">
             How it works
           </a>
           <Link href="/limitations" className="hidden text-ink-2 transition-colors hover:text-ink sm:inline">
             Limits
           </Link>
-          <Link href="/download" className="hidden text-ink-2 transition-colors hover:text-ink md:inline">
+          <Link href="/download" className="hidden text-ink-2 transition-colors hover:text-ink lg:inline">
             Get the app
           </Link>
           {signedIn ? (

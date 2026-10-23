@@ -81,8 +81,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { text-wrap: balance; }
-p { text-wrap: pretty; }
+/* In the base layer so utilities such as `truncate` (white-space: nowrap) still win:
+   unlayered, `text-wrap` would reset the wrap mode on every heading and paragraph. */
+@layer base {
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
 
 .tabular { font-variant-numeric: tabular-nums; }
 

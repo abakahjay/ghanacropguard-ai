@@ -3,7 +3,7 @@
 // - Hashed build assets, icons and site photos: cache first (their URLs change when they do).
 // - The API (FullBackendd, another origin) is never touched: results and photos are private
 //   and must always be live. Bump VERSION when this file changes.
-const VERSION = "cg-v1";
+const VERSION = "cg-v2";
 const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/favicon.svg", "/icons/icon-192.png"];
 
 self.addEventListener("install", (event) => {
@@ -52,7 +52,7 @@ self.addEventListener("fetch", (event) => {
             }
             return res;
           }),
-      ),
+      ).catch(() => Response.error()), // offline or cancelled: fail like a normal broken image
     );
   }
 });
