@@ -6,7 +6,7 @@ import { ServerAddress } from "@/components/ServerAddress";
 import { Button, Card, Field, T } from "@/components/ui";
 import { api } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
-import { colors, font } from "@/lib/theme";
+import { column, colors, font } from "@/lib/theme";
 
 export default function Profile() {
   const { user, refresh, signOut } = useAuth();
@@ -26,7 +26,7 @@ export default function Profile() {
 
   if (!user) return null;
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 40 }}>
+    <ScrollView contentContainerStyle={{ ...column, padding: 16, gap: 16, paddingBottom: 40 }}>
       <Card>
         <T variant="head" accessibilityRole="header">
           Your details

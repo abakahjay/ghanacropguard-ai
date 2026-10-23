@@ -5,7 +5,7 @@ import { ActivityIndicator, Alert, Linking, ScrollView, TextInput, View } from "
 
 import { Banner, Button, Card, ConfidenceBars, T, cap } from "@/components/ui";
 import { absoluteUrl, api } from "@/lib/api";
-import { colors, font, radius } from "@/lib/theme";
+import { column, colors, font, radius } from "@/lib/theme";
 
 const KIND = { disease: "Disease", pest: "Pest damage", healthy: "No problem detected" };
 
@@ -64,7 +64,7 @@ export default function ResultScreen() {
   const img = absoluteUrl(p.image_url);
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 40 }}>
+    <ScrollView contentContainerStyle={{ ...column, padding: 16, gap: 16, paddingBottom: 40 }}>
       <Stack.Screen options={{ title: `${top.display_name} · ${cap(top.crop)}` }} />
       {img ? (
         <Image

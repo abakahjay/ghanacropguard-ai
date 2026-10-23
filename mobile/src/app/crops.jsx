@@ -3,7 +3,7 @@ import { ActivityIndicator, Pressable, ScrollView, View } from "react-native";
 
 import { Banner, Card, T } from "@/components/ui";
 import { api } from "@/lib/api";
-import { colors } from "@/lib/theme";
+import { column, colors } from "@/lib/theme";
 import { CROPS } from "@/lib/types";
 
 export default function Crops() {
@@ -18,7 +18,7 @@ export default function Crops() {
   }, []);
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, gap: 12, paddingBottom: 40 }}>
+    <ScrollView contentContainerStyle={{ ...column, padding: 16, gap: 12, paddingBottom: 40 }}>
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 6 }}>
         {CROPS.map((c) => (
           <Pressable

@@ -7,7 +7,7 @@ import { Linking, ScrollView, StyleSheet, View } from "react-native";
 import { Banner, Button, Card, OfflineBanner, T } from "@/components/ui";
 import { uploadPrediction } from "@/lib/api";
 import { compressForUpload, formatBytes } from "@/lib/image";
-import { colors, radius } from "@/lib/theme";
+import { column, colors, radius } from "@/lib/theme";
 
 export default function CheckScreen() {
   const [stage, setStage] = useState({ kind: "empty" });
@@ -171,7 +171,7 @@ export default function CheckScreen() {
 }
 
 const st = StyleSheet.create({
-  wrap: { padding: 16, gap: 16, paddingBottom: 32 },
+  wrap: { ...column, padding: 16, gap: 16, paddingBottom: 32 },
   photo: { aspectRatio: 4 / 3, borderRadius: radius.lg, overflow: "hidden", backgroundColor: colors.surface },
   empty: { flex: 1, justifyContent: "flex-end", padding: 20 },
   row: { flexDirection: "row", justifyContent: "space-between", gap: 12 },

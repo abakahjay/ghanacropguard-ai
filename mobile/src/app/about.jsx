@@ -3,7 +3,7 @@ import { Linking, Pressable, ScrollView } from "react-native";
 
 import { Card, T } from "@/components/ui";
 import { api } from "@/lib/api";
-import { colors } from "@/lib/theme";
+import { column, colors } from "@/lib/theme";
 
 const PORTFOLIO_URL = "https://portfolio-8jmo.onrender.com/";
 
@@ -19,7 +19,7 @@ export default function About() {
   }, []);
   const t = info?.test_metrics;
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, gap: 16, paddingBottom: 40 }}>
+    <ScrollView contentContainerStyle={{ ...column, padding: 16, gap: 16, paddingBottom: 40 }}>
       <Card>
         <T variant="head" accessibilityRole="header">
           Measured accuracy

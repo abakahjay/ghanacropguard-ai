@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Banner, Button, Card, Field, OfflineBanner, T } from "@/components/ui";
 
 import { api } from "@/lib/api";
-import { colors } from "@/lib/theme";
+import { column, colors } from "@/lib/theme";
 
 // The emailed link opens the website's reset page, which works on any device.
 const WEB_URL = String(Constants.expoConfig?.extra?.webUrl ?? "").replace(/\/$/, "");
@@ -44,7 +44,7 @@ export default function ForgotPassword() {
       <OfflineBanner />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
         <ScrollView
-          contentContainerStyle={{ flexGrow: 1, justifyContent: "flex-end", padding: 16, gap: 16 }}
+          contentContainerStyle={{ ...column, flexGrow: 1, justifyContent: "flex-end", padding: 16, gap: 16 }}
           keyboardShouldPersistTaps="handled"
         >
           <T variant="title" accessibilityRole="header">

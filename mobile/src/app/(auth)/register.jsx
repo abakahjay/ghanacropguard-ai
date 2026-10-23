@@ -7,7 +7,7 @@ import { ServerAddress } from "@/components/ServerAddress";
 import { Banner, Button, Field, OfflineBanner, T } from "@/components/ui";
 
 import { useAuth } from "@/lib/auth";
-import { colors, font } from "@/lib/theme";
+import { column, colors, font } from "@/lib/theme";
 import { GHANA_REGIONS } from "@/lib/types";
 
 export default function Register() {
@@ -58,7 +58,7 @@ export default function Register() {
       <OfflineBanner />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
         <ScrollView
-          contentContainerStyle={{ padding: 16, gap: 16, paddingTop: 32 }}
+          contentContainerStyle={{ ...column, padding: 16, gap: 16, paddingTop: 32 }}
           keyboardShouldPersistTaps="handled"
         >
           <T variant="title" accessibilityRole="header">

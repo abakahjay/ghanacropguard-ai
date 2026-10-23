@@ -27,3 +27,6 @@ export const font = {
 
 export const radius = { sm: 6, lg: 10 };
 export const space = { margin: 16, gap: 12 };
+
+/** Screen content column: full width on phones, a centred 640dp column on tablets. */
+export const column = { width: "100%", maxWidth: 640, alignSelf: "center" };

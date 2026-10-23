@@ -7,7 +7,7 @@ import { ServerAddress } from "@/components/ServerAddress";
 import { Banner, Button, Field, OfflineBanner, T } from "@/components/ui";
 
 import { useAuth } from "@/lib/auth";
-import { colors } from "@/lib/theme";
+import { column, colors } from "@/lib/theme";
 
 export default function Login() {
   const { signIn } = useAuth();
@@ -37,7 +37,7 @@ export default function Login() {
       <OfflineBanner />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined}>
         <ScrollView
-          contentContainerStyle={{ flexGrow: 1, justifyContent: "flex-end", padding: 16, gap: 16 }}
+          contentContainerStyle={{ ...column, flexGrow: 1, justifyContent: "flex-end", padding: 16, gap: 16 }}
           keyboardShouldPersistTaps="handled"
         >
           <T variant="title" accessibilityRole="header">

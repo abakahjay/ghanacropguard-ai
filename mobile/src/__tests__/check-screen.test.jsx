@@ -22,7 +22,7 @@ const asset = { uri: "file:///leaf.jpg", width: 4000, height: 3000, fileSize: 4_
 beforeEach(() => {
   jest.clearAllMocks();
   jest.spyOn(image, "compressForUpload").mockResolvedValue({ uri: "file:///small.jpg", width: 1280, height: 960 });
-  global.fetch = jest.fn(async () => ({ blob: async () => ({ size: 205_000 }) }));
+  global.fetch = jest.fn(async () => ({ arrayBuffer: async () => ({ byteLength: 205_000 }) }));
 });
 
 test("camera workflow: permission, capture, compress, upload, open result", async () => {

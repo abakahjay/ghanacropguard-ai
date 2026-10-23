@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { Button, T } from "@/components/ui";
-import { colors, font } from "@/lib/theme";
+import { colors, column, font } from "@/lib/theme";
 
 import { ONBOARDED_KEY } from "@/lib/keys";
 
@@ -45,7 +45,7 @@ export default function Onboarding() {
         keyExtractor={(p) => p.title}
         onMomentumScrollEnd={(e) => setI(Math.round(e.nativeEvent.contentOffset.x / width))}
         renderItem={({ item, index }) => (
-          <View style={[st.page, { width }]}>
+          <View style={[st.page, { width, paddingHorizontal: Math.max(24, (width - 640) / 2 + 16) }]}>
             <T style={st.step} accessibilityLabel={`Step ${index + 1} of ${PAGES.length}`}>
               {index + 1} / {PAGES.length}
             </T>
@@ -58,7 +58,7 @@ export default function Onboarding() {
           </View>
         )}
       />
-      <View style={st.footer}>
+      <View style={[column, st.footer]}>
         <View style={st.dots}>
           {PAGES.map((p, k) => (
             <View key={p.title} style={[st.dot, k === i && st.dotOn]} />

@@ -5,7 +5,7 @@ import { FlatList, Pressable, RefreshControl, StyleSheet, TextInput, View } from
 
 import { Banner, Button, OfflineBanner, T, cap } from "@/components/ui";
 import { absoluteUrl, api } from "@/lib/api";
-import { colors, font } from "@/lib/theme";
+import { column, colors, font } from "@/lib/theme";
 import { CROPS } from "@/lib/types";
 
 const PAGE = 20;
@@ -59,7 +59,7 @@ export default function History() {
   return (
     <View style={{ flex: 1 }}>
       <OfflineBanner />
-      <View style={st.filters}>
+      <View style={[column, st.filters]}>
         <TextInput
           value={q}
           onChangeText={setQ}
@@ -97,14 +97,14 @@ export default function History() {
         )}
       </View>
       {error && (
-        <View style={{ paddingHorizontal: 16 }}>
+        <View style={{ ...column, paddingHorizontal: 16 }}>
           <Banner text={error} />
         </View>
       )}
       <FlatList
         data={items}
         keyExtractor={(p) => p.id}
-        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24, gap: 4 }}
+        contentContainerStyle={{ ...column, paddingHorizontal: 16, paddingBottom: 24, gap: 4 }}
         refreshControl={
           <RefreshControl refreshing={loading && page === 1} onRefresh={() => load(1)} tintColor={colors.ink} />
         }
