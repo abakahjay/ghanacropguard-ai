@@ -1,0 +1,394 @@
+rel,true,pred,confidence
+Cashew/anthracnose/anthracnose1211_.jpg,cashew_anthracnose,cashew_leaf_miner,0.5182
+Cashew/anthracnose/anthracnose1213_.jpg,cashew_anthracnose,cashew_leaf_miner,0.9223
+Cashew/anthracnose/anthracnose1241_.jpg,cashew_anthracnose,tomato_leaf_blight,0.3281
+Cashew/anthracnose/anthracnose1252_.jpg,cashew_anthracnose,tomato_leaf_blight,0.3633
+Cashew/anthracnose/anthracnose1383_.jpg,cashew_anthracnose,cashew_healthy,0.3676
+Cashew/anthracnose/anthracnose1401_.jpg,cashew_anthracnose,cashew_red_rust,0.5862
+Cashew/anthracnose/anthracnose1464_.jpg,cashew_anthracnose,cashew_leaf_miner,0.7841
+Cashew/anthracnose/anthracnose1474_.jpg,cashew_anthracnose,cashew_healthy,0.7477
+Cashew/anthracnose/anthracnose1569_.jpg,cashew_anthracnose,cashew_leaf_miner,0.8834
+Cashew/anthracnose/anthracnose1570_.jpg,cashew_anthracnose,cashew_leaf_miner,0.7879
+Cashew/anthracnose/anthracnose15_.jpg,cashew_anthracnose,cashew_healthy,0.7001
+Cashew/anthracnose/anthracnose1706_.jpg,cashew_anthracnose,cashew_healthy,0.7836
+Cashew/anthracnose/anthracnose1708_.jpg,cashew_anthracnose,cashew_healthy,0.8905
+Cashew/anthracnose/anthracnose18_.jpg,cashew_anthracnose,cashew_leaf_miner,0.4634
+Cashew/anthracnose/anthracnose191_.jpg,cashew_anthracnose,cashew_leaf_miner,0.6553
+Cashew/anthracnose/anthracnose469_.jpg,cashew_anthracnose,maize_fall_armyworm,0.2581
+Cashew/anthracnose/anthracnose690_.jpg,cashew_anthracnose,cashew_healthy,0.8776
+Cashew/anthracnose/anthracnose6_.jpg,cashew_anthracnose,cashew_leaf_miner,0.9217
+Cashew/anthracnose/anthracnose756_.jpg,cashew_anthracnose,cashew_leaf_miner,0.5756
+Cashew/anthracnose/anthracnose757_.jpg,cashew_anthracnose,cashew_leaf_miner,0.6597
+Cashew/anthracnose/anthracnose758_.jpg,cashew_anthracnose,maize_fall_armyworm,0.2177
+Cashew/anthracnose/anthracnose771_.jpg,cashew_anthracnose,cashew_healthy,0.4249
+Cashew/anthracnose/anthracnose830_.jpg,cashew_anthracnose,cashew_leaf_miner,0.3839
+Cashew/anthracnose/anthracnose937_.jpg,cashew_anthracnose,cashew_leaf_miner,0.8640
+Cashew/anthracnose/anthracnose988_.jpg,cashew_anthracnose,tomato_leaf_blight,0.1870
+Cashew/anthracnose/anthracnose991_.jpg,cashew_anthracnose,cashew_leaf_miner,0.9002
+Cashew/gumosis/gumosis283_.jpg,cashew_gummosis,cashew_healthy,0.8943
+Cashew/gumosis/gumosis285_.jpg,cashew_gummosis,cassava_bacterial_blight,0.8714
+Cashew/healthy/healthy304_.jpg,cashew_healthy,cashew_anthracnose,0.4636
+Cashew/healthy/healthy414_.jpg,cashew_healthy,cashew_anthracnose,0.6961
+Cashew/leaf miner/leaf miner1079_.jpg,cashew_leaf_miner,cashew_anthracnose,0.7183
+Cashew/leaf miner/leaf miner1286_.jpg,cashew_leaf_miner,cashew_red_rust,0.6182
+Cashew/leaf miner/leaf miner129_.jpg,cashew_leaf_miner,cashew_healthy,0.3901
+Cashew/leaf miner/leaf miner1375_.jpg,cashew_leaf_miner,cashew_anthracnose,0.6260
+Cashew/leaf miner/leaf miner67_.jpg,cashew_leaf_miner,cashew_anthracnose,0.6833
+Cashew/leaf miner/leaf miner703_.jpg,cashew_leaf_miner,cashew_red_rust,0.9104
+Cashew/leaf miner/leaf miner864_.jpg,cashew_leaf_miner,cashew_healthy,0.4438
+Cashew/red rust/red rust356_.jpg,cashew_red_rust,cashew_leaf_miner,0.9015
+Cassava/bacterial blight/bacterial blight1037_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.4837
+Cassava/bacterial blight/bacterial blight1083_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.7139
+Cassava/bacterial blight/bacterial blight1087_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.4940
+Cassava/bacterial blight/bacterial blight1201_.jpg,cassava_bacterial_blight,cassava_green_mite,0.5942
+Cassava/bacterial blight/bacterial blight1217_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.4728
+Cassava/bacterial blight/bacterial blight1250_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.5139
+Cassava/bacterial blight/bacterial blight1298_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.5814
+Cassava/bacterial blight/bacterial blight1301_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.5435
+Cassava/bacterial blight/bacterial blight1304_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.7192
+Cassava/bacterial blight/bacterial blight1346_.jpg,cassava_bacterial_blight,maize_leaf_blight,0.3506
+Cassava/bacterial blight/bacterial blight1948_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.6045
+Cassava/bacterial blight/bacterial blight1979_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.5535
+Cassava/bacterial blight/bacterial blight1981_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.6117
+Cassava/bacterial blight/bacterial blight1999_.jpg,cassava_bacterial_blight,cashew_anthracnose,0.2952
+Cassava/bacterial blight/bacterial blight2444_.jpg,cassava_bacterial_blight,cassava_healthy,0.4518
+Cassava/bacterial blight/bacterial blight2600_.jpg,cassava_bacterial_blight,cassava_healthy,0.9156
+Cassava/bacterial blight/bacterial blight935_.jpg,cassava_bacterial_blight,cassava_brown_spot,0.8218
+Cassava/brown spot/brown spot1040_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5494
+Cassava/brown spot/brown spot112_.jpg,cassava_brown_spot,maize_grasshopper,0.2349
+Cassava/brown spot/brown spot1222_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.7724
+Cassava/brown spot/brown spot1256_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.4728
+Cassava/brown spot/brown spot1297_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.8771
+Cassava/brown spot/brown spot131_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5833
+Cassava/brown spot/brown spot139_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5158
+Cassava/brown spot/brown spot1472_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.7230
+Cassava/brown spot/brown spot204_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.6583
+Cassava/brown spot/brown spot206_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.4217
+Cassava/brown spot/brown spot249_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.8484
+Cassava/brown spot/brown spot291_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5523
+Cassava/brown spot/brown spot459_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.8032
+Cassava/brown spot/brown spot552_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5823
+Cassava/brown spot/brown spot555_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.8136
+Cassava/brown spot/brown spot558_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.9045
+Cassava/brown spot/brown spot559_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.9078
+Cassava/brown spot/brown spot564_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.3469
+Cassava/brown spot/brown spot612_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.9882
+Cassava/brown spot/brown spot686_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.4785
+Cassava/brown spot/brown spot798_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.7517
+Cassava/brown spot/brown spot846_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.6518
+Cassava/brown spot/brown spot911_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.5263
+Cassava/brown spot/brown spot932_.jpg,cassava_brown_spot,cashew_anthracnose,0.3891
+Cassava/brown spot/brown spot953_.jpg,cassava_brown_spot,cassava_bacterial_blight,0.7263
+Cassava/green mite/green mite142_.jpg,cassava_green_mite,cassava_healthy,0.5369
+Cassava/green mite/green mite149_.jpg,cassava_green_mite,cassava_bacterial_blight,0.5062
+Cassava/green mite/green mite150_.jpg,cassava_green_mite,cassava_bacterial_blight,0.3576
+Cassava/green mite/green mite200_.jpg,cassava_green_mite,cassava_bacterial_blight,0.2617
+Cassava/green mite/green mite23_.jpg,cassava_green_mite,cassava_mosaic,0.8403
+Cassava/green mite/green mite329_.jpg,cassava_green_mite,cassava_mosaic,0.8429
+Cassava/green mite/green mite341_.jpg,cassava_green_mite,cassava_mosaic,0.9495
+Cassava/green mite/green mite344_.jpg,cassava_green_mite,cassava_mosaic,0.6610
+Cassava/green mite/green mite373_.jpg,cassava_green_mite,cassava_bacterial_blight,0.5810
+Cassava/green mite/green mite47_.jpg,cassava_green_mite,cassava_healthy,0.5660
+Cassava/green mite/green mite602_.jpg,cassava_green_mite,cassava_mosaic,0.4706
+Cassava/green mite/green mite781_.jpg,cassava_green_mite,cassava_healthy,0.8650
+Cassava/green mite/green mite84_.jpg,cassava_green_mite,cassava_healthy,0.3578
+Cassava/green mite/green mite872_.jpg,cassava_green_mite,cassava_mosaic,0.8357
+Cassava/green mite/green mite94_.jpg,cassava_green_mite,cassava_bacterial_blight,0.3769
+Cassava/healthy/healthy35_.jpg,cassava_healthy,cassava_green_mite,0.4766
+Cassava/healthy/healthy65_.jpg,cassava_healthy,cassava_bacterial_blight,0.7950
+Cassava/healthy/healthy690_.jpg,cassava_healthy,cassava_green_mite,0.6289
+Cassava/healthy/healthy909_.jpg,cassava_healthy,cassava_bacterial_blight,0.8963
+Cassava/mosaic/mosaic321_.jpg,cassava_mosaic,tomato_healthy,0.7567
+Cassava/mosaic/mosaic458_.jpg,cassava_mosaic,cassava_bacterial_blight,0.4567
+Cassava/mosaic/mosaic809_.jpg,cassava_mosaic,cassava_green_mite,0.8888
+Maize/fall armyworm/fall armyworm89_.jpg,maize_fall_armyworm,maize_leaf_spot,0.8831
+Maize/grasshoper/grasshoper332_.jpg,maize_grasshopper,maize_leaf_beetle,0.6787
+Maize/healthy/healthy58_.jpg,maize_healthy,maize_leaf_spot,0.3743
+Maize/leaf beetle/leaf beetle400_.jpg,maize_leaf_beetle,maize_leaf_spot,0.3673
+Maize/leaf beetle/leaf beetle855_.jpg,maize_leaf_beetle,maize_fall_armyworm,0.8205
+Maize/leaf beetle/leaf beetle930_.jpg,maize_leaf_beetle,maize_leaf_spot,0.4821
+Maize/leaf beetle/leaf beetle931_.jpg,maize_leaf_beetle,maize_leaf_spot,0.4774
+Maize/leaf blight/leaf blight207_.jpg,maize_leaf_blight,maize_leaf_spot,0.3781
+Maize/leaf blight/leaf blight208_.jpg,maize_leaf_blight,maize_leaf_spot,0.4692
+Maize/leaf blight/leaf blight286_.jpg,maize_leaf_blight,maize_leaf_spot,0.6941
+Maize/leaf blight/leaf blight295_.jpg,maize_leaf_blight,maize_streak_virus,0.8044
+Maize/leaf blight/leaf blight389_.jpg,maize_leaf_blight,maize_leaf_spot,0.4876
+Maize/leaf blight/leaf blight471_.jpg,maize_leaf_blight,maize_leaf_spot,0.5702
+Maize/leaf blight/leaf blight569_.jpg,maize_leaf_blight,maize_leaf_spot,0.5207
+Maize/leaf blight/leaf blight595_.jpg,maize_leaf_blight,maize_leaf_spot,0.3719
+Maize/leaf blight/leaf blight719_.jpg,maize_leaf_blight,maize_leaf_spot,0.5963
+Maize/leaf blight/leaf blight723_.jpg,maize_leaf_blight,maize_leaf_spot,0.3684
+Maize/leaf blight/leaf blight945_.jpg,maize_leaf_blight,maize_leaf_spot,0.3540
+Maize/leaf blight/leaf blight992_.jpg,maize_leaf_blight,maize_streak_virus,0.5052
+Maize/leaf spot/leaf spot1006_.jpg,maize_leaf_spot,maize_healthy,0.8499
+Maize/leaf spot/leaf spot1063_.jpg,maize_leaf_spot,maize_streak_virus,0.5907
+Maize/leaf spot/leaf spot1094_.jpg,maize_leaf_spot,maize_healthy,0.6664
+Maize/leaf spot/leaf spot1095_.jpg,maize_leaf_spot,maize_healthy,0.7082
+Maize/leaf spot/leaf spot1123_.jpg,maize_leaf_spot,maize_healthy,0.9672
+Maize/leaf spot/leaf spot1135_.jpg,maize_leaf_spot,maize_healthy,0.4352
+Maize/leaf spot/leaf spot1141_.jpg,maize_leaf_spot,maize_healthy,0.4281
+Maize/leaf spot/leaf spot1151_.jpg,maize_leaf_spot,maize_healthy,0.8652
+Maize/leaf spot/leaf spot1160_.jpg,maize_leaf_spot,maize_healthy,0.9387
+Maize/leaf spot/leaf spot1184_.jpg,maize_leaf_spot,maize_healthy,0.8997
+Maize/leaf spot/leaf spot1186_.jpg,maize_leaf_spot,maize_healthy,0.2958
+Maize/leaf spot/leaf spot1187_.jpg,maize_leaf_spot,maize_healthy,0.6913
+Maize/leaf spot/leaf spot1209_.jpg,maize_leaf_spot,maize_healthy,0.9068
+Maize/leaf spot/leaf spot1211_.jpg,maize_leaf_spot,maize_healthy,0.9316
+Maize/leaf spot/leaf spot1216_.jpg,maize_leaf_spot,maize_healthy,0.4351
+Maize/leaf spot/leaf spot219_.jpg,maize_leaf_spot,maize_leaf_blight,0.7609
+Maize/leaf spot/leaf spot246_.jpg,maize_leaf_spot,maize_streak_virus,0.5763
+Maize/leaf spot/leaf spot253_.jpg,maize_leaf_spot,maize_streak_virus,0.5580
+Maize/leaf spot/leaf spot269_.jpg,maize_leaf_spot,maize_fall_armyworm,0.4505
+Maize/leaf spot/leaf spot309_.jpg,maize_leaf_spot,maize_streak_virus,0.8699
+Maize/leaf spot/leaf spot366_.jpg,maize_leaf_spot,maize_leaf_blight,0.9556
+Maize/leaf spot/leaf spot373_.jpg,maize_leaf_spot,maize_fall_armyworm,0.7183
+Maize/leaf spot/leaf spot504_.jpg,maize_leaf_spot,maize_healthy,0.4015
+Maize/leaf spot/leaf spot524_.jpg,maize_leaf_spot,maize_healthy,0.3714
+Maize/leaf spot/leaf spot585_.jpg,maize_leaf_spot,maize_streak_virus,0.8237
+Maize/leaf spot/leaf spot687_.jpg,maize_leaf_spot,maize_leaf_blight,0.4811
+Maize/leaf spot/leaf spot762_.jpg,maize_leaf_spot,cassava_bacterial_blight,0.2580
+Maize/leaf spot/leaf spot79_.jpg,maize_leaf_spot,maize_leaf_blight,0.6492
+Maize/leaf spot/leaf spot870_.jpg,maize_leaf_spot,maize_leaf_blight,0.6346
+Maize/leaf spot/leaf spot908_.jpg,maize_leaf_spot,maize_leaf_blight,0.4583
+Maize/leaf spot/leaf spot911_.jpg,maize_leaf_spot,maize_leaf_blight,0.5695
+Maize/leaf spot/leaf spot953_.jpg,maize_leaf_spot,maize_streak_virus,0.8380
+Maize/leaf spot/leaf spot954_.jpg,maize_leaf_spot,maize_streak_virus,0.8286
+Maize/leaf spot/leaf spot986_.jpg,maize_leaf_spot,maize_leaf_blight,0.7701
+Maize/streak virus/streak virus122_.jpg,maize_streak_virus,maize_leaf_spot,0.4517
+Maize/streak virus/streak virus144_.jpg,maize_streak_virus,maize_leaf_spot,0.4496
+Maize/streak virus/streak virus274_.jpg,maize_streak_virus,maize_healthy,0.6062
+Maize/streak virus/streak virus276_.jpg,maize_streak_virus,maize_leaf_spot,0.4062
+Maize/streak virus/streak virus671_.jpg,maize_streak_virus,maize_leaf_spot,0.7311
+Maize/streak virus/streak virus813_.jpg,maize_streak_virus,maize_leaf_spot,0.6857
+Maize/streak virus/streak virus96_.jpg,maize_streak_virus,maize_fall_armyworm,0.5569
+Tomato/healthy/healthy39_.jpg,tomato_healthy,tomato_leaf_blight,0.5310
+Tomato/healthy/healthy84_.jpg,tomato_healthy,tomato_leaf_curl,0.5907
+Tomato/healthy/healthy93_.jpg,tomato_healthy,tomato_leaf_curl,0.6274
+Tomato/healthy/healthy95_.jpg,tomato_healthy,tomato_leaf_curl,0.5966
+Tomato/leaf blight/leaf blight1027_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4601
+Tomato/leaf blight/leaf blight1056_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.7492
+Tomato/leaf blight/leaf blight1060_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6584
+Tomato/leaf blight/leaf blight1137_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.5007
+Tomato/leaf blight/leaf blight1177_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4688
+Tomato/leaf blight/leaf blight1178_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4331
+Tomato/leaf blight/leaf blight1180_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4530
+Tomato/leaf blight/leaf blight1208_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4385
+Tomato/leaf blight/leaf blight1213_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6673
+Tomato/leaf blight/leaf blight1223_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.3013
+Tomato/leaf blight/leaf blight1224_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.3122
+Tomato/leaf blight/leaf blight1225_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.4137
+Tomato/leaf blight/leaf blight1230_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.6771
+Tomato/leaf blight/leaf blight1234_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.4489
+Tomato/leaf blight/leaf blight1268_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6802
+Tomato/leaf blight/leaf blight1270_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.5587
+Tomato/leaf blight/leaf blight442_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.5081
+Tomato/leaf blight/leaf blight443_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.4448
+Tomato/leaf blight/leaf blight487_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4140
+Tomato/leaf blight/leaf blight494_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.3889
+Tomato/leaf blight/leaf blight513_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.7601
+Tomato/leaf blight/leaf blight525_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.6996
+Tomato/leaf blight/leaf blight626_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6903
+Tomato/leaf blight/leaf blight646_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4845
+Tomato/leaf blight/leaf blight654_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.3463
+Tomato/leaf blight/leaf blight692_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.5339
+Tomato/leaf blight/leaf blight738_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.4680
+Tomato/leaf blight/leaf blight743_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4174
+Tomato/leaf blight/leaf blight758_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.8107
+Tomato/leaf blight/leaf blight759_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.6556
+Tomato/leaf blight/leaf blight761_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.8966
+Tomato/leaf blight/leaf blight762_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.4763
+Tomato/leaf blight/leaf blight774_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.6777
+Tomato/leaf blight/leaf blight779_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.3748
+Tomato/leaf blight/leaf blight798_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.7620
+Tomato/leaf blight/leaf blight819_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.5975
+Tomato/leaf blight/leaf blight868_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.4209
+Tomato/leaf blight/leaf blight908_.jpg,tomato_leaf_blight,tomato_verticillium_wilt,0.6631
+Tomato/leaf blight/leaf blight932_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.3184
+Tomato/leaf blight/leaf blight961_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6170
+Tomato/leaf blight/leaf blight980_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.2521
+Tomato/leaf blight/leaf blight981_.jpg,tomato_leaf_blight,tomato_leaf_curl,0.3237
+Tomato/leaf blight/leaf blight984_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.3262
+Tomato/leaf blight/leaf blight988_.jpg,tomato_leaf_blight,tomato_septoria_leaf_spot,0.6154
+Tomato/leaf curl/leaf curl116_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.4598
+Tomato/leaf curl/leaf curl202_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.4672
+Tomato/leaf curl/leaf curl21_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.7851
+Tomato/leaf curl/leaf curl221_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.3628
+Tomato/leaf curl/leaf curl227_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.4965
+Tomato/leaf curl/leaf curl259_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.5813
+Tomato/leaf curl/leaf curl266_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.4288
+Tomato/leaf curl/leaf curl279_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.3980
+Tomato/leaf curl/leaf curl290_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.3090
+Tomato/leaf curl/leaf curl294_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.5002
+Tomato/leaf curl/leaf curl2_.jpg,tomato_leaf_curl,tomato_healthy,0.4204
+Tomato/leaf curl/leaf curl313_.jpg,tomato_leaf_curl,tomato_verticillium_wilt,0.4128
+Tomato/leaf curl/leaf curl32_.jpg,tomato_leaf_curl,tomato_healthy,0.8469
+Tomato/leaf curl/leaf curl33_.jpg,tomato_leaf_curl,tomato_healthy,0.4917
+Tomato/leaf curl/leaf curl35_.jpg,tomato_leaf_curl,tomato_healthy,0.9648
+Tomato/leaf curl/leaf curl36_.jpg,tomato_leaf_curl,tomato_healthy,0.6815
+Tomato/leaf curl/leaf curl382_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.6602
+Tomato/leaf curl/leaf curl386_.jpg,tomato_leaf_curl,tomato_healthy,0.9683
+Tomato/leaf curl/leaf curl459_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.6023
+Tomato/leaf curl/leaf curl481_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.6449
+Tomato/leaf curl/leaf curl482_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.7547
+Tomato/leaf curl/leaf curl506_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.6953
+Tomato/leaf curl/leaf curl5_.jpg,tomato_leaf_curl,tomato_leaf_blight,0.3192
+Tomato/leaf curl/leaf curl77_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.4524
+Tomato/leaf curl/leaf curl79_.jpg,tomato_leaf_curl,tomato_septoria_leaf_spot,0.5147
+Tomato/septoria leaf spot/septoria leaf spot1000_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.4877
+Tomato/septoria leaf spot/septoria leaf spot1016_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3467
+Tomato/septoria leaf spot/septoria leaf spot1031_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5133
+Tomato/septoria leaf spot/septoria leaf spot1036_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5313
+Tomato/septoria leaf spot/septoria leaf spot1062_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4849
+Tomato/septoria leaf spot/septoria leaf spot1064_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6228
+Tomato/septoria leaf spot/septoria leaf spot1090_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6214
+Tomato/septoria leaf spot/septoria leaf spot1093_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6504
+Tomato/septoria leaf spot/septoria leaf spot1097_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4307
+Tomato/septoria leaf spot/septoria leaf spot1132_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.7946
+Tomato/septoria leaf spot/septoria leaf spot1140_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4178
+Tomato/septoria leaf spot/septoria leaf spot1142_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3838
+Tomato/septoria leaf spot/septoria leaf spot1147_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.5805
+Tomato/septoria leaf spot/septoria leaf spot1161_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3950
+Tomato/septoria leaf spot/septoria leaf spot1162_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5831
+Tomato/septoria leaf spot/septoria leaf spot1167_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.6763
+Tomato/septoria leaf spot/septoria leaf spot1173_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4537
+Tomato/septoria leaf spot/septoria leaf spot1196_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.8738
+Tomato/septoria leaf spot/septoria leaf spot1198_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4547
+Tomato/septoria leaf spot/septoria leaf spot1233_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6917
+Tomato/septoria leaf spot/septoria leaf spot1234_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6985
+Tomato/septoria leaf spot/septoria leaf spot1327_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3236
+Tomato/septoria leaf spot/septoria leaf spot1417_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.5047
+Tomato/septoria leaf spot/septoria leaf spot1430_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.4250
+Tomato/septoria leaf spot/septoria leaf spot1465_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3097
+Tomato/septoria leaf spot/septoria leaf spot1466_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.3168
+Tomato/septoria leaf spot/septoria leaf spot148_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7506
+Tomato/septoria leaf spot/septoria leaf spot1534_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.5208
+Tomato/septoria leaf spot/septoria leaf spot1558_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.3860
+Tomato/septoria leaf spot/septoria leaf spot156_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7178
+Tomato/septoria leaf spot/septoria leaf spot1576_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5081
+Tomato/septoria leaf spot/septoria leaf spot159_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.9053
+Tomato/septoria leaf spot/septoria leaf spot1660_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6962
+Tomato/septoria leaf spot/septoria leaf spot169_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7400
+Tomato/septoria leaf spot/septoria leaf spot1777_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4324
+Tomato/septoria leaf spot/septoria leaf spot1828_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6295
+Tomato/septoria leaf spot/septoria leaf spot1834_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4099
+Tomato/septoria leaf spot/septoria leaf spot1853_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4394
+Tomato/septoria leaf spot/septoria leaf spot1865_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.8421
+Tomato/septoria leaf spot/septoria leaf spot1868_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7554
+Tomato/septoria leaf spot/septoria leaf spot1880_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5527
+Tomato/septoria leaf spot/septoria leaf spot1894_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7016
+Tomato/septoria leaf spot/septoria leaf spot1913_-E1fXR8.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4679
+Tomato/septoria leaf spot/septoria leaf spot1924_-UpnqJ6.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3930
+Tomato/septoria leaf spot/septoria leaf spot1936_-BUrZiA.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.5435
+Tomato/septoria leaf spot/septoria leaf spot195_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4012
+Tomato/septoria leaf spot/septoria leaf spot202_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7950
+Tomato/septoria leaf spot/septoria leaf spot2030_-lsNTJo.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4584
+Tomato/septoria leaf spot/septoria leaf spot2080_-BWnU2c.jpg,tomato_septoria_leaf_spot,tomato_healthy,0.9638
+Tomato/septoria leaf spot/septoria leaf spot2092_-uwpqOT.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4415
+Tomato/septoria leaf spot/septoria leaf spot2120_-iFPKec.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4167
+Tomato/septoria leaf spot/septoria leaf spot2200_-TXVmYO.jpg,tomato_septoria_leaf_spot,tomato_healthy,0.7553
+Tomato/septoria leaf spot/septoria leaf spot2217_-2xBzUi.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4965
+Tomato/septoria leaf spot/septoria leaf spot2250_-SjrH5d.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.5028
+Tomato/septoria leaf spot/septoria leaf spot2256_-KgeuNw.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.9077
+Tomato/septoria leaf spot/septoria leaf spot227_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4489
+Tomato/septoria leaf spot/septoria leaf spot2290_-xZk5VQ.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4236
+Tomato/septoria leaf spot/septoria leaf spot2293_-OQNeH3.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3687
+Tomato/septoria leaf spot/septoria leaf spot2312_-GQSdc7.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3857
+Tomato/septoria leaf spot/septoria leaf spot2334_-BM6hqj.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3080
+Tomato/septoria leaf spot/septoria leaf spot2336_-L0rfKo.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.6163
+Tomato/septoria leaf spot/septoria leaf spot2355_-I3tR8h.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6651
+Tomato/septoria leaf spot/septoria leaf spot23_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7633
+Tomato/septoria leaf spot/septoria leaf spot247_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.9287
+Tomato/septoria leaf spot/septoria leaf spot251_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5569
+Tomato/septoria leaf spot/septoria leaf spot252_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6000
+Tomato/septoria leaf spot/septoria leaf spot255_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6381
+Tomato/septoria leaf spot/septoria leaf spot256_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4106
+Tomato/septoria leaf spot/septoria leaf spot258_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3541
+Tomato/septoria leaf spot/septoria leaf spot25_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3348
+Tomato/septoria leaf spot/septoria leaf spot269_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5958
+Tomato/septoria leaf spot/septoria leaf spot275_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4200
+Tomato/septoria leaf spot/septoria leaf spot288_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.4388
+Tomato/septoria leaf spot/septoria leaf spot304_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.6976
+Tomato/septoria leaf spot/septoria leaf spot324_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4469
+Tomato/septoria leaf spot/septoria leaf spot344_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.3250
+Tomato/septoria leaf spot/septoria leaf spot381_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5227
+Tomato/septoria leaf spot/septoria leaf spot418_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.6026
+Tomato/septoria leaf spot/septoria leaf spot420_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4380
+Tomato/septoria leaf spot/septoria leaf spot425_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4574
+Tomato/septoria leaf spot/septoria leaf spot426_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.3502
+Tomato/septoria leaf spot/septoria leaf spot436_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.4950
+Tomato/septoria leaf spot/septoria leaf spot445_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.5215
+Tomato/septoria leaf spot/septoria leaf spot458_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3579
+Tomato/septoria leaf spot/septoria leaf spot491_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.8026
+Tomato/septoria leaf spot/septoria leaf spot507_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.6466
+Tomato/septoria leaf spot/septoria leaf spot510_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.7919
+Tomato/septoria leaf spot/septoria leaf spot516_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4864
+Tomato/septoria leaf spot/septoria leaf spot518_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4282
+Tomato/septoria leaf spot/septoria leaf spot521_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.7206
+Tomato/septoria leaf spot/septoria leaf spot553_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4241
+Tomato/septoria leaf spot/septoria leaf spot562_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7952
+Tomato/septoria leaf spot/septoria leaf spot568_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4363
+Tomato/septoria leaf spot/septoria leaf spot571_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4399
+Tomato/septoria leaf spot/septoria leaf spot598_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3897
+Tomato/septoria leaf spot/septoria leaf spot5_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.5972
+Tomato/septoria leaf spot/septoria leaf spot600_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5748
+Tomato/septoria leaf spot/septoria leaf spot62_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.2731
+Tomato/septoria leaf spot/septoria leaf spot64_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4112
+Tomato/septoria leaf spot/septoria leaf spot681_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.3581
+Tomato/septoria leaf spot/septoria leaf spot68_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.5325
+Tomato/septoria leaf spot/septoria leaf spot770_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4904
+Tomato/septoria leaf spot/septoria leaf spot772_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.3506
+Tomato/septoria leaf spot/septoria leaf spot79_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.7473
+Tomato/septoria leaf spot/septoria leaf spot810_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.6580
+Tomato/septoria leaf spot/septoria leaf spot815_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.5327
+Tomato/septoria leaf spot/septoria leaf spot884_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.6747
+Tomato/septoria leaf spot/septoria leaf spot923_.jpg,tomato_septoria_leaf_spot,tomato_leaf_curl,0.4853
+Tomato/septoria leaf spot/septoria leaf spot946_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.4539
+Tomato/septoria leaf spot/septoria leaf spot949_.jpg,tomato_septoria_leaf_spot,tomato_verticillium_wilt,0.3962
+Tomato/septoria leaf spot/septoria leaf spot951_.jpg,tomato_septoria_leaf_spot,tomato_leaf_blight,0.4260
+Tomato/verticulium wilt/verticulium wilt125_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.6959
+Tomato/verticulium wilt/verticulium wilt148_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4749
+Tomato/verticulium wilt/verticulium wilt15_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.6426
+Tomato/verticulium wilt/verticulium wilt174_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4013
+Tomato/verticulium wilt/verticulium wilt175_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.2874
+Tomato/verticulium wilt/verticulium wilt201_.jpg,tomato_verticillium_wilt,tomato_leaf_curl,0.4249
+Tomato/verticulium wilt/verticulium wilt227_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5542
+Tomato/verticulium wilt/verticulium wilt274_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.6058
+Tomato/verticulium wilt/verticulium wilt280_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.4105
+Tomato/verticulium wilt/verticulium wilt283_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.5618
+Tomato/verticulium wilt/verticulium wilt303_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.8712
+Tomato/verticulium wilt/verticulium wilt315_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5953
+Tomato/verticulium wilt/verticulium wilt326_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.8930
+Tomato/verticulium wilt/verticulium wilt329_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.3401
+Tomato/verticulium wilt/verticulium wilt337_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4881
+Tomato/verticulium wilt/verticulium wilt347_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.7019
+Tomato/verticulium wilt/verticulium wilt369_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.5321
+Tomato/verticulium wilt/verticulium wilt371_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.5304
+Tomato/verticulium wilt/verticulium wilt373_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.3885
+Tomato/verticulium wilt/verticulium wilt374_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.4456
+Tomato/verticulium wilt/verticulium wilt378_.jpg,tomato_verticillium_wilt,tomato_leaf_curl,0.3068
+Tomato/verticulium wilt/verticulium wilt386_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.6938
+Tomato/verticulium wilt/verticulium wilt432_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5849
+Tomato/verticulium wilt/verticulium wilt437_.jpg,tomato_verticillium_wilt,tomato_leaf_curl,0.5570
+Tomato/verticulium wilt/verticulium wilt43_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5661
+Tomato/verticulium wilt/verticulium wilt456_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4655
+Tomato/verticulium wilt/verticulium wilt457_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4329
+Tomato/verticulium wilt/verticulium wilt462_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.6491
+Tomato/verticulium wilt/verticulium wilt471_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.2926
+Tomato/verticulium wilt/verticulium wilt473_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.5583
+Tomato/verticulium wilt/verticulium wilt477_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.5674
+Tomato/verticulium wilt/verticulium wilt508_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4809
+Tomato/verticulium wilt/verticulium wilt514_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.6400
+Tomato/verticulium wilt/verticulium wilt526_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4982
+Tomato/verticulium wilt/verticulium wilt542_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4246
+Tomato/verticulium wilt/verticulium wilt544_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5211
+Tomato/verticulium wilt/verticulium wilt561_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4946
+Tomato/verticulium wilt/verticulium wilt567_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.7501
+Tomato/verticulium wilt/verticulium wilt636_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4885
+Tomato/verticulium wilt/verticulium wilt637_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.3747
+Tomato/verticulium wilt/verticulium wilt712_.jpg,tomato_verticillium_wilt,tomato_leaf_curl,0.9703
+Tomato/verticulium wilt/verticulium wilt738_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.6369
+Tomato/verticulium wilt/verticulium wilt739_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.4616
+Tomato/verticulium wilt/verticulium wilt749_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.4471
+Tomato/verticulium wilt/verticulium wilt750_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5276
+Tomato/verticulium wilt/verticulium wilt751_.jpg,tomato_verticillium_wilt,tomato_leaf_blight,0.5482
+Tomato/verticulium wilt/verticulium wilt754_.jpg,tomato_verticillium_wilt,tomato_septoria_leaf_spot,0.4889

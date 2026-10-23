@@ -1,0 +1,230 @@
+{
+  "split": "test",
+  "run": "mobilenetv3_large",
+  "arch": "mobilenetv3_large_100.ra_in1k",
+  "n_images": 3615,
+  "accuracy": 0.891286307053942,
+  "top3_accuracy": 0.9911479944674966,
+  "precision_macro": 0.8802504128907799,
+  "recall_macro": 0.8962453974710605,
+  "f1_macro": 0.8847897033182399,
+  "precision_weighted": 0.8976110480577901,
+  "recall_weighted": 0.891286307053942,
+  "f1_weighted": 0.8920562800741708,
+  "ece_15bin": 0.07855380367111534,
+  "mean_confidence_correct": 0.8419761657714844,
+  "mean_confidence_wrong": 0.5739303231239319,
+  "crop_level_accuracy": 0.9966804979253112,
+  "params": 4230214,
+  "checkpoint_mb": 17.11,
+  "latency_cpu": {
+    "batch": 1,
+    "runs": 50,
+    "threads": 12,
+    "mean_ms": 42.54,
+    "p50_ms": 41.87,
+    "p95_ms": 52.4
+  },
+  "eval_seconds": 84.5,
+  "best_val": {
+    "macro_f1": 0.8749264680666393,
+    "acc": 0.8797345866740393,
+    "epoch": 3
+  },
+  "per_class": {
+    "cashew_anthracnose": {
+      "precision": 0.970954356846473,
+      "recall": 0.9,
+      "f1": 0.9341317365269461,
+      "support": 260
+    },
+    "cashew_gummosis": {
+      "precision": 1.0,
+      "recall": 0.9661016949152542,
+      "f1": 0.9827586206896551,
+      "support": 59
+    },
+    "cashew_healthy": {
+      "precision": 0.9530516431924883,
+      "recall": 0.9902439024390244,
+      "f1": 0.9712918660287081,
+      "support": 205
+    },
+    "cashew_leaf_miner": {
+      "precision": 0.9345794392523364,
+      "recall": 0.966183574879227,
+      "f1": 0.9501187648456056,
+      "support": 207
+    },
+    "cashew_red_rust": {
+      "precision": 0.9881889763779528,
+      "recall": 0.996031746031746,
+      "f1": 0.9920948616600791,
+      "support": 252
+    },
+    "cassava_bacterial_blight": {
+      "precision": 0.9185185185185185,
+      "recall": 0.9562982005141388,
+      "f1": 0.9370277078085643,
+      "support": 389
+    },
+    "cassava_brown_spot": {
+      "precision": 0.9420289855072463,
+      "recall": 0.8863636363636364,
+      "f1": 0.9133489461358314,
+      "support": 220
+    },
+    "cassava_green_mite": {
+      "precision": 0.9716312056737588,
+      "recall": 0.9013157894736842,
+      "f1": 0.9351535836177475,
+      "support": 152
+    },
+    "cassava_healthy": {
+      "precision": 0.9668508287292817,
+      "recall": 0.9776536312849162,
+      "f1": 0.9722222222222222,
+      "support": 179
+    },
+    "cassava_mosaic": {
+      "precision": 0.9647058823529412,
+      "recall": 0.9820359281437125,
+      "f1": 0.973293768545994,
+      "support": 167
+    },
+    "maize_fall_armyworm": {
+      "precision": 0.875,
+      "recall": 0.9767441860465116,
+      "f1": 0.9230769230769231,
+      "support": 43
+    },
+    "maize_grasshopper": {
+      "precision": 0.9900990099009901,
+      "recall": 0.9900990099009901,
+      "f1": 0.9900990099009901,
+      "support": 101
+    },
+    "maize_healthy": {
+      "precision": 0.6382978723404256,
+      "recall": 0.967741935483871,
+      "f1": 0.7692307692307693,
+      "support": 31
+    },
+    "maize_leaf_beetle": {
+      "precision": 0.9927007299270073,
+      "recall": 0.9714285714285714,
+      "f1": 0.9819494584837545,
+      "support": 140
+    },
+    "maize_leaf_blight": {
+      "precision": 0.9217391304347826,
+      "recall": 0.8983050847457628,
+      "f1": 0.9098712446351931,
+      "support": 118
+    },
+    "maize_leaf_spot": {
+      "precision": 0.8571428571428571,
+      "recall": 0.7792207792207793,
+      "f1": 0.8163265306122449,
+      "support": 154
+    },
+    "maize_streak_virus": {
+      "precision": 0.9357142857142857,
+      "recall": 0.9492753623188406,
+      "f1": 0.9424460431654677,
+      "support": 138
+    },
+    "tomato_healthy": {
+      "precision": 0.88,
+      "recall": 0.9428571428571428,
+      "f1": 0.9103448275862069,
+      "support": 70
+    },
+    "tomato_leaf_blight": {
+      "precision": 0.5866141732283464,
+      "recall": 0.772020725388601,
+      "f1": 0.6666666666666666,
+      "support": 193
+    },
+    "tomato_leaf_curl": {
+      "precision": 0.5473684210526316,
+      "recall": 0.6753246753246753,
+      "f1": 0.6046511627906976,
+      "support": 77
+    },
+    "tomato_septoria_leaf_spot": {
+      "precision": 0.8262411347517731,
+      "recall": 0.6773255813953488,
+      "f1": 0.744408945686901,
+      "support": 344
+    },
+    "tomato_verticillium_wilt": {
+      "precision": 0.7040816326530612,
+      "recall": 0.5948275862068966,
+      "f1": 0.6448598130841121,
+      "support": 116
+    }
+  },
+  "top_confusions": [
+    {
+      "true": "tomato_septoria_leaf_spot",
+      "pred": "tomato_leaf_blight",
+      "count": 65
+    },
+    {
+      "true": "tomato_septoria_leaf_spot",
+      "pred": "tomato_leaf_curl",
+      "count": 28
+    },
+    {
+      "true": "tomato_verticillium_wilt",
+      "pred": "tomato_leaf_blight",
+      "count": 25
+    },
+    {
+      "true": "tomato_leaf_blight",
+      "pred": "tomato_septoria_leaf_spot",
+      "count": 24
+    },
+    {
+      "true": "cassava_brown_spot",
+      "pred": "cassava_bacterial_blight",
+      "count": 23
+    },
+    {
+      "true": "tomato_verticillium_wilt",
+      "pred": "tomato_septoria_leaf_spot",
+      "count": 18
+    },
+    {
+      "true": "tomato_septoria_leaf_spot",
+      "pred": "tomato_verticillium_wilt",
+      "count": 16
+    },
+    {
+      "true": "maize_leaf_spot",
+      "pred": "maize_healthy",
+      "count": 16
+    },
+    {
+      "true": "cashew_anthracnose",
+      "pred": "cashew_leaf_miner",
+      "count": 13
+    },
+    {
+      "true": "tomato_leaf_blight",
+      "pred": "tomato_verticillium_wilt",
+      "count": 12
+    },
+    {
+      "true": "cassava_bacterial_blight",
+      "pred": "cassava_brown_spot",
+      "count": 12
+    },
+    {
+      "true": "tomato_leaf_curl",
+      "pred": "tomato_leaf_blight",
+      "count": 11
+    }
+  ]
+}

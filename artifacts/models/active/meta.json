@@ -1,0 +1,322 @@
+{
+  "name": "mobilenetv3_large_100-1.0.0",
+  "version": "1.0.0",
+  "arch": "mobilenetv3_large_100.ra_in1k",
+  "framework": "torch 2.14.1+cpu -> onnx opset 17",
+  "created_at": "2026-10-23T11:37:42Z",
+  "input": {
+    "name": "input",
+    "layout": "NCHW",
+    "dtype": "float32"
+  },
+  "output": {
+    "name": "logits",
+    "activation": "none (apply softmax)"
+  },
+  "preprocess": {
+    "image_size": 224,
+    "resize_size": 256,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "interpolation": "bicubic"
+  },
+  "classes": [
+    {
+      "key": "cashew_anthracnose",
+      "crop": "cashew",
+      "source_folder": "anthracnose",
+      "display_name": "Anthracnose",
+      "kind": "disease",
+      "index": 0
+    },
+    {
+      "key": "cashew_gummosis",
+      "crop": "cashew",
+      "source_folder": "gumosis",
+      "display_name": "Gummosis",
+      "kind": "disease",
+      "index": 1
+    },
+    {
+      "key": "cashew_healthy",
+      "crop": "cashew",
+      "source_folder": "healthy",
+      "display_name": "Healthy",
+      "kind": "healthy",
+      "index": 2
+    },
+    {
+      "key": "cashew_leaf_miner",
+      "crop": "cashew",
+      "source_folder": "leaf miner",
+      "display_name": "Leaf miner",
+      "kind": "pest",
+      "index": 3
+    },
+    {
+      "key": "cashew_red_rust",
+      "crop": "cashew",
+      "source_folder": "red rust",
+      "display_name": "Red rust",
+      "kind": "disease",
+      "index": 4
+    },
+    {
+      "key": "cassava_bacterial_blight",
+      "crop": "cassava",
+      "source_folder": "bacterial blight",
+      "display_name": "Bacterial blight",
+      "kind": "disease",
+      "index": 5
+    },
+    {
+      "key": "cassava_brown_spot",
+      "crop": "cassava",
+      "source_folder": "brown spot",
+      "display_name": "Brown spot",
+      "kind": "disease",
+      "index": 6
+    },
+    {
+      "key": "cassava_green_mite",
+      "crop": "cassava",
+      "source_folder": "green mite",
+      "display_name": "Green mite",
+      "kind": "pest",
+      "index": 7
+    },
+    {
+      "key": "cassava_healthy",
+      "crop": "cassava",
+      "source_folder": "healthy",
+      "display_name": "Healthy",
+      "kind": "healthy",
+      "index": 8
+    },
+    {
+      "key": "cassava_mosaic",
+      "crop": "cassava",
+      "source_folder": "mosaic",
+      "display_name": "Mosaic",
+      "kind": "disease",
+      "index": 9
+    },
+    {
+      "key": "maize_fall_armyworm",
+      "crop": "maize",
+      "source_folder": "fall armyworm",
+      "display_name": "Fall armyworm",
+      "kind": "pest",
+      "index": 10
+    },
+    {
+      "key": "maize_grasshopper",
+      "crop": "maize",
+      "source_folder": "grasshoper",
+      "display_name": "Grasshopper",
+      "kind": "pest",
+      "index": 11
+    },
+    {
+      "key": "maize_healthy",
+      "crop": "maize",
+      "source_folder": "healthy",
+      "display_name": "Healthy",
+      "kind": "healthy",
+      "index": 12
+    },
+    {
+      "key": "maize_leaf_beetle",
+      "crop": "maize",
+      "source_folder": "leaf beetle",
+      "display_name": "Leaf beetle",
+      "kind": "pest",
+      "index": 13
+    },
+    {
+      "key": "maize_leaf_blight",
+      "crop": "maize",
+      "source_folder": "leaf blight",
+      "display_name": "Leaf blight",
+      "kind": "disease",
+      "index": 14
+    },
+    {
+      "key": "maize_leaf_spot",
+      "crop": "maize",
+      "source_folder": "leaf spot",
+      "display_name": "Leaf spot",
+      "kind": "disease",
+      "index": 15
+    },
+    {
+      "key": "maize_streak_virus",
+      "crop": "maize",
+      "source_folder": "streak virus",
+      "display_name": "Streak virus",
+      "kind": "disease",
+      "index": 16
+    },
+    {
+      "key": "tomato_healthy",
+      "crop": "tomato",
+      "source_folder": "healthy",
+      "display_name": "Healthy",
+      "kind": "healthy",
+      "index": 17
+    },
+    {
+      "key": "tomato_leaf_blight",
+      "crop": "tomato",
+      "source_folder": "leaf blight",
+      "display_name": "Leaf blight",
+      "kind": "disease",
+      "index": 18
+    },
+    {
+      "key": "tomato_leaf_curl",
+      "crop": "tomato",
+      "source_folder": "leaf curl",
+      "display_name": "Leaf curl",
+      "kind": "disease",
+      "index": 19
+    },
+    {
+      "key": "tomato_septoria_leaf_spot",
+      "crop": "tomato",
+      "source_folder": "septoria leaf spot",
+      "display_name": "Septoria leaf spot",
+      "kind": "disease",
+      "index": 20
+    },
+    {
+      "key": "tomato_verticillium_wilt",
+      "crop": "tomato",
+      "source_folder": "verticulium wilt",
+      "display_name": "Verticillium wilt",
+      "kind": "disease",
+      "index": 21
+    }
+  ],
+  "num_classes": 22,
+  "onnx_parity": {
+    "max_abs_logit_diff": 5.424022674560547e-06,
+    "argmax_agreement": 1.0,
+    "n_val_images": 32
+  },
+  "quantized": {
+    "argmax_agreement_vs_fp32_on_val_sample": 0.75
+  },
+  "validation_best": {
+    "macro_f1": 0.8749264680666393,
+    "acc": 0.8797345866740393,
+    "epoch": 3
+  },
+  "test_metrics": {
+    "n_images": 3615,
+    "accuracy": 0.891286307053942,
+    "top3_accuracy": 0.9911479944674966,
+    "precision_macro": 0.8802504128907799,
+    "recall_macro": 0.8962453974710605,
+    "f1_macro": 0.8847897033182399,
+    "f1_weighted": 0.8920562800741708,
+    "ece_15bin": 0.07855380367111534,
+    "latency_cpu": {
+      "batch": 1,
+      "runs": 50,
+      "threads": 12,
+      "mean_ms": 42.54,
+      "p50_ms": 41.87,
+      "p95_ms": 52.4
+    }
+  },
+  "dataset": {
+    "dataset": "CCMT: Dataset for Crop Pest and Disease Detection",
+    "source": "https://data.mendeley.com/datasets/bwh3zbpkpv/1",
+    "doi": "10.17632/bwh3zbpkpv.1",
+    "license": "CC BY 4.0",
+    "citation": "Mensah, P. K., Akoto-Adjepong, V., Adu, K., Ayidzoe, M. A., Bediako, E. A., Nyarko-Boateng, O., Boateng, S., Donkor, E. F., Umar Bawah, F., Awarayi, N. S., Nimbe, P., Nti, I. K., Abdulai, M., Adjei, R. R., Opoku, M., Abdulai, S., & Amu-Mensah, F. (2023). CCMT: Dataset for crop pest and disease detection. Data in Brief, 49, 109306. https://doi.org/10.1016/j.dib.2023.109306 ; data: https://doi.org/10.17632/bwh3zbpkpv.1",
+    "subset": "Raw Data/CCMT Dataset (augmented tree intentionally excluded)",
+    "downloaded_at": "2026-10-23T07:10:54Z",
+    "file_count": 25220,
+    "stats": {
+      "skipped": 4116,
+      "downloaded": 14130
+    },
+    "failures": [],
+    "expected_counts": {
+      "Cashew/anthracnose": 1729,
+      "Cashew/gumosis": 392,
+      "Cashew/healthy": 1368,
+      "Cashew/leaf miner": 1378,
+      "Cashew/red rust": 1682,
+      "Cassava/bacterial blight": 2614,
+      "Cassava/brown spot": 1481,
+      "Cassava/green mite": 1015,
+      "Cassava/healthy": 1193,
+      "Cassava/mosaic": 1205,
+      "Maize/fall armyworm": 285,
+      "Maize/grasshoper": 673,
+      "Maize/healthy": 208,
+      "Maize/leaf beetle": 948,
+      "Maize/leaf blight": 1006,
+      "Maize/leaf spot": 1259,
+      "Maize/streak virus": 979,
+      "Tomato/healthy": 470,
+      "Tomato/leaf blight": 1301,
+      "Tomato/leaf curl": 518,
+      "Tomato/septoria leaf spot": 2743,
+      "Tomato/verticulium wilt": 773
+    },
+    "expected_total": 25220,
+    "api_stats": {
+      "skipped": 18246
+    },
+    "zip_completed_at": "2026-10-23T07:11:58Z",
+    "zip_raw_counts": {
+      "Cashew/anthracnose": 1729,
+      "Cashew/gumosis": 392,
+      "Cashew/healthy": 1368,
+      "Cashew/leaf miner": 1378,
+      "Cashew/red rust": 1682,
+      "Cassava/bacterial blight": 2614,
+      "Cassava/brown spot": 1481,
+      "Cassava/green mite": 1015,
+      "Cassava/healthy": 1193,
+      "Cassava/mosaic": 1205,
+      "Maize/fall armyworm": 285,
+      "Maize/grasshoper": 673,
+      "Maize/healthy": 208,
+      "Maize/leaf beetle": 948,
+      "Maize/leaf blight": 1006,
+      "Maize/leaf spot": 1259,
+      "Maize/streak virus": 979,
+      "Tomato/healthy": 470,
+      "Tomato/leaf blight": 1301,
+      "Tomato/leaf curl": 518,
+      "Tomato/septoria leaf spot": 2743,
+      "Tomato/verticulium wilt": 773
+    },
+    "zip_raw_total": 25220,
+    "method": "files API (sha256-verified) + dataset ZIP via HTTP range (CRC32-verified)"
+  },
+  "files": {
+    "model.onnx": {
+      "sha256": "58cc677cce2958567d86ab43d06139e5a746619e4e78afb50bfad2fcb9de944a",
+      "bytes": 16908020
+    },
+    "model.int8.onnx": {
+      "sha256": "e39ad57f05213915a60882c7312bb0bc48b39c2d33894a42b1ef121ff73adc5c",
+      "bytes": 4435353
+    }
+  },
+  "intended_use": "Preliminary visual screening aid for 22 CCMT classes of cashew, cassava, maize and tomato. Not a diagnosis. Outputs are only meaningful for those crops."
+}
