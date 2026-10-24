@@ -9,6 +9,7 @@ __pycache__/
 # Data and training outputs (large; reproducible from scripts)
 ml/data/
 ml/runs/*/best.pt
+ml/runs/*/leaf_gate_features.npz
 logs/
 
 # Model bundles: keep meta.json in git, ONNX via release/LFS

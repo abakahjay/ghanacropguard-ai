@@ -32,13 +32,17 @@ def main() -> None:
         lat = ((meta.get("test_metrics") or {}).get("latency_cpu") or {}).get("p50_ms")
         cands.append({"bundle": meta_p.parent.name, "arch": meta["arch"], "val_macro_f1": vb.get("macro_f1"),
                       "val_acc": vb.get("acc"), "cpu_p50_ms": lat,
-                      "test_macro_f1_reported_only": (meta.get("test_metrics") or {}).get("f1_macro")})
+                      "test_macro_f1_reported_only": (meta.get("test_metrics") or {}).get("f1_macro"),
+                      "leaf_check": meta.get("leaf_gate") is not None, "created_at": meta.get("created_at", "")})
     cands = [c for c in cands if c["val_macro_f1"] is not None]
     if not cands:
         raise SystemExit("No exported bundles with validation results found.")
     best_f1 = max(c["val_macro_f1"] for c in cands)
     near = [c for c in cands if best_f1 - c["val_macro_f1"] <= args.tolerance]
-    chosen = min(near, key=lambda c: (c["cpu_p50_ms"] if c["cpu_p50_ms"] is not None else 1e9, -c["val_macro_f1"]))
+    # Ties (e.g. the same weights re-exported) go to the bundle with the leaf check, then the newest.
+    near.sort(key=lambda c: c["created_at"], reverse=True)
+    chosen = min(near, key=lambda c: (c["cpu_p50_ms"] if c["cpu_p50_ms"] is not None else 1e9, -c["val_macro_f1"],
+                                      not c["leaf_check"]))
 
     active = models / "active"
     if active.exists():

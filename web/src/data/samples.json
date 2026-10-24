@@ -1,5 +1,5 @@
 {
-  "model": "mobilenetv3_large_100-1.0.0",
+  "model": "mobilenetv3_large_100-1.1.0",
   "samples": [
     {
       "file": "/samples/cassava_mosaic.jpg",
@@ -11,7 +11,7 @@
         "crop": "cassava"
       },
       "source_file": "Cassava/mosaic/mosaic395_.jpg",
-      "model": "mobilenetv3_large_100-1.0.0",
+      "model": "mobilenetv3_large_100-1.1.0",
       "top3": [
         {
           "class_key": "cassava_mosaic",
@@ -45,7 +45,7 @@
         "crop": "maize"
       },
       "source_file": "Maize/fall armyworm/fall armyworm166_.jpg",
-      "model": "mobilenetv3_large_100-1.0.0",
+      "model": "mobilenetv3_large_100-1.1.0",
       "top3": [
         {
           "class_key": "maize_fall_armyworm",
@@ -79,7 +79,7 @@
         "crop": "cashew"
       },
       "source_file": "Cashew/anthracnose/anthracnose673_.jpg",
-      "model": "mobilenetv3_large_100-1.0.0",
+      "model": "mobilenetv3_large_100-1.1.0",
       "top3": [
         {
           "class_key": "cashew_anthracnose",
@@ -113,7 +113,7 @@
         "crop": "tomato"
       },
       "source_file": "Tomato/leaf curl/leaf curl149_.jpg",
-      "model": "mobilenetv3_large_100-1.0.0",
+      "model": "mobilenetv3_large_100-1.1.0",
       "top3": [
         {
           "class_key": "tomato_leaf_curl",

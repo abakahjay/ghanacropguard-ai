@@ -1,11 +1,13 @@
 {
   "selected": {
-    "bundle": "mobilenetv3_large_100-1.0.0",
+    "bundle": "mobilenetv3_large_100-1.1.0",
     "arch": "mobilenetv3_large_100.ra_in1k",
     "val_macro_f1": 0.8749264680666393,
     "val_acc": 0.8797345866740393,
     "cpu_p50_ms": 41.87,
-    "test_macro_f1_reported_only": 0.8847897033182399
+    "test_macro_f1_reported_only": 0.8847897033182399,
+    "leaf_check": true,
+    "created_at": "2026-10-24T00:20:42Z"
   },
   "candidates": [
     {
@@ -14,9 +16,21 @@
       "val_macro_f1": 0.8749264680666393,
       "val_acc": 0.8797345866740393,
       "cpu_p50_ms": 41.87,
-      "test_macro_f1_reported_only": 0.8847897033182399
+      "test_macro_f1_reported_only": 0.8847897033182399,
+      "leaf_check": false,
+      "created_at": "2026-10-23T11:37:42Z"
+    },
+    {
+      "bundle": "mobilenetv3_large_100-1.1.0",
+      "arch": "mobilenetv3_large_100.ra_in1k",
+      "val_macro_f1": 0.8749264680666393,
+      "val_acc": 0.8797345866740393,
+      "cpu_p50_ms": 41.87,
+      "test_macro_f1_reported_only": 0.8847897033182399,
+      "leaf_check": true,
+      "created_at": "2026-10-24T00:20:42Z"
     }
   ],
   "rule": "Rule (fixed before any test result was seen): highest validation macro-F1; if two models are\nwithin 0.5 percentage points, prefer the one with lower CPU latency. Test metrics are reported\nfor every model but never used for this choice.",
-  "selected_at": "2026-10-23T11:37:44Z"
+  "selected_at": "2026-10-24T00:27:30Z"
 }

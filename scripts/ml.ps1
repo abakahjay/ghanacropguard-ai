@@ -13,7 +13,8 @@ Stages:
   smoke      2-epoch tiny run to prove the pipeline works (not for reporting)
   train      -Model mobilenetv3|efficientnet_b0|convnext_tiny
   evaluate   -Model ...   held-out TEST evaluation (after training)
-  export     -Model ... -Version 1.0.0   ONNX bundle into artifacts\models
+  leaf-gate  -Model ...   fit the "is this a leaf?" check (downloads Imagenette + Caltech-101 negatives)
+  export     -Model ... -Version 1.0.0   ONNX bundle into artifacts\models (includes the leaf check if fitted)
   activate   -Bundle <folder name>   point artifacts\models\active at a bundle
   compare    comparison table across evaluated runs
   pipeline   everything above in order; resumable (skips finished steps)
@@ -88,6 +89,7 @@ try {
     "smoke" { Invoke-Logged "smoke" $Py @("-m", "cropguard_ml.train", "--config", "configs/smoke.yaml") }
     "train" { Invoke-Logged "train-$Model" $Py @("-m", "cropguard_ml.train", "--config", "configs/$Model.yaml") }
     "evaluate" { Invoke-Logged "evaluate-$Model" $Py @("-m", "cropguard_ml.evaluate", "--run", "runs/$($RunName[$Model])") }
+    "leaf-gate" { Invoke-Logged "leaf-gate-$Model" $Py @("-m", "cropguard_ml.leaf_gate", "--run", "runs/$($RunName[$Model])") }
     "export" { Invoke-Logged "export-$Model" $Py @("-m", "cropguard_ml.export", "--run", "runs/$($RunName[$Model])", "--version", $Version, "--out", "../artifacts/models", "--quantize") }
     "pipeline" {
       # One-click, resumable: each step is skipped if its output already exists.
@@ -113,6 +115,9 @@ try {
         }
         if (-not (Test-Path "runs/$($m.run)/test_metrics.json")) {
           Invoke-Logged "evaluate-$($m.key)" $Py @("-m", "cropguard_ml.evaluate", "--run", "runs/$($m.run)")
+        }
+        if (-not (Test-Path "runs/$($m.run)/leaf_gate.json")) {
+          Invoke-Logged "leaf-gate-$($m.key)" $Py @("-m", "cropguard_ml.leaf_gate", "--run", "runs/$($m.run)")
         }
         if (-not (Test-Path "../artifacts/models/$($m.arch)-$Version/meta.json")) {
           Invoke-Logged "export-$($m.key)" $Py @("-m", "cropguard_ml.export", "--run", "runs/$($m.run)", "--version", $Version, "--out", "../artifacts/models", "--quantize")
