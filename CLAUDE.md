@@ -92,3 +92,8 @@ Load these skills (they are installed for this user) before working in this repo
 - `/emil-design-eng` – interaction details, motion and component craft
 
 The FullBackendd API is shared by many live apps (Nsoro, GH-GPT, CleanBridge, SeedBridge, GhanaCropGuard web and mobile, the portfolio and the static MTN/AFA pages). Before changing any route, middleware, error shape, CORS, auth or rate limit, grep those apps' folders in `Desktop/VS Projects` for what they use, and keep each of them working.
+
+## Leaf check and Android release
+
+- The model bundle has a second ONNX output, `leaf_score` (`ml/cropguard_ml/leaf_gate.py`, folded in by `export`). FullBackendd refuses photos below `meta.leaf_gate.threshold` with `422 not_a_leaf`; web and mobile show a toast asking for a leaf photo. Refit with `scripts\ml.ps1 -Stage leaf-gate` before exporting a new model, and keep the toast handling in both clients.
+- Android APK: `scripts\dev.ps1 -Stage mobile-apk` (see `docs/MOBILE.md`: needs ninja 1.12+, builds from `C:\gcg-build`, signs with the key in `%USERPROFILE%\.android-keys`). Publish it as `GhanaCropGuard.apk` on a GitHub Release; the Get the app page links to `releases/latest/download/GhanaCropGuard.apk`.
