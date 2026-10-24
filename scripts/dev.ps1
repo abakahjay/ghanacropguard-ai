@@ -16,6 +16,7 @@ Stages:
   mobile-setup  npm ci for the Expo app
   mobile        start Expo (scan the QR code with a development build / Expo Go)
   mobile-test   lint and unit tests for the mobile app
+  mobile-apk    signed release APK -> mobile\dist\GhanaCropGuard.apk (calls the live API; see docs\MOBILE.md)
 #>
 param([Parameter(Mandatory = $true)][string]$Stage)
 
@@ -76,5 +77,39 @@ switch ($Stage) {
     } finally { Pop-Location }
   }
   "mobile-test" { Push-Location $Mobile; try { npx eslint .; npx jest } finally { Pop-Location } }
+  "mobile-apk" {
+    # Release key lives outside the repo; create it once with keytool (docs\MOBILE.md). Back it up.
+    $keyProps = Join-Path $env:USERPROFILE ".android-keys\ghanacropguard-release.properties"
+    if (-not (Test-Path $keyProps)) { throw "Release key not found: $keyProps (see docs\MOBILE.md)" }
+    $key = @{}
+    Get-Content $keyProps | ForEach-Object { $k, $v = $_ -split "=", 2; if ($k) { $key[$k.Trim()] = $v.Trim() } }
+    $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+    if (-not $env:ANDROID_HOME) { $env:ANDROID_HOME = Join-Path $env:LOCALAPPDATA "Android\Sdk" }
+    $env:EXPO_PUBLIC_API_URL = "https://fullbackendd.onrender.com"
+    $env:NODE_ENV = "production"
+    Remove-Item Env:ALLOW_HTTP -ErrorAction SilentlyContinue
+    Push-Location $Mobile
+    try {
+      $env:CI = "1"; npx expo prebuild -p android --clean --no-install; Remove-Item Env:CI
+      if ($LASTEXITCODE -ne 0) { throw "expo prebuild failed" }
+      Push-Location android
+      # Some modules ask for a Java 17 toolchain; use installed JDKs instead of a slow auto-download.
+      $jdks = Join-Path $env:APPDATA "Code\User\globalStorage\pleiades.java-extension-pack-jdk\java"
+      $toolchains = @("17", "21") | ForEach-Object { Join-Path $jdks $_ } | Where-Object { Test-Path $_ }
+      $tc = if ($toolchains) { @("-Porg.gradle.java.installations.paths=$($toolchains -join ',')") } else { @() }
+      try { .\gradlew.bat assembleRelease "-PreactNativeArchitectures=armeabi-v7a,arm64-v8a,x86_64" @tc --no-daemon }
+      finally { Pop-Location }
+      if ($LASTEXITCODE -ne 0) { throw "Gradle build failed" }
+      $tools = Get-ChildItem (Join-Path $env:ANDROID_HOME "build-tools") | Sort-Object Name | Select-Object -Last 1
+      New-Item -ItemType Directory -Force dist | Out-Null
+      $apk = Join-Path $Mobile "dist\GhanaCropGuard.apk"
+      & (Join-Path $tools.FullName "apksigner.bat") sign --ks $key.storeFile --ks-key-alias $key.alias `
+        --ks-pass "pass:$($key.password)" --key-pass "pass:$($key.password)" --out $apk `
+        "android\app\build\outputs\apk\release\app-release.apk"
+      if ($LASTEXITCODE -ne 0) { throw "apksigner failed" }
+      & (Join-Path $tools.FullName "apksigner.bat") verify --print-certs $apk | Select-Object -First 2
+      Write-Host "APK: $apk ($([math]::Round((Get-Item $apk).Length / 1MB, 1)) MB)" -ForegroundColor Green
+    } finally { Pop-Location }
+  }
   default { throw "Unknown stage '$Stage'" }
 }

@@ -26,7 +26,19 @@ npx eas-cli@latest build -p android --profile production   # Android App Bundle 
 npx eas-cli@latest build -p ios --profile production       # needs an Apple Developer account
 npx eas-cli@latest submit -p android                       # optional: upload to Play Console
 ```
-Local Android build without EAS (Android Studio + JDK 17 installed): `npx expo prebuild -p android && cd android && ./gradlew assembleRelease`.
+## Build the Android APK on Windows (no EAS)
+`scripts\dev.ps1 -Stage mobile-apk` does all of it and writes `mobile\dist\GhanaCropGuard.apk`:
+1. `npx expo prebuild -p android --clean` with `EXPO_PUBLIC_API_URL=https://fullbackendd.onrender.com` (HTTPS only; `ALLOW_HTTP` unset).
+2. `gradlew assembleRelease` with Android Studio's JDK (`jbr`) for armeabi-v7a, arm64-v8a and x86_64 (phones, BlueStacks, the emulator). React Native's Java/Kotlin and C++ (Hermes, the new architecture) are compiled here; the first build downloads the NDK and build tools.
+3. `apksigner` re-signs it with the release key in `%USERPROFILE%\.android-keys\ghanacropguard-release.jks` (password in the `.properties` file next to it). **Back both files up**: Android only installs updates signed with the same key. Never commit them.
+
+Publish it as the `GhanaCropGuard.apk` asset of a GitHub Release; the website's **Get the app** page links to `releases/latest/download/GhanaCropGuard.apk`.
+
+## iPhone and iPad
+Apple only lets iOS apps be built with Xcode on macOS, and the iOS Simulator runs only on a Mac; neither exists for Windows. From Windows:
+- **Now, no Mac:** iPhone users install the website as an app (Safari → Share → Add to Home Screen); the **Get the app** page shows the steps.
+- **Try the native app:** `npx eas-cli@latest build -p ios --profile ios-simulator` builds on Expo's Macs (free Expo account). The result runs in the iOS Simulator on any Mac, or in a browser on appetize.io.
+- **Install on real iPhones / App Store:** needs an Apple Developer Program membership; then `eas build -p ios --profile production` and `eas submit -p ios` (TestFlight).
 
 ## Performance choices
 - Photos are resized to 1280 px and JPEG-compressed on the phone (`src/lib/image.js`) before upload: ~4 MB → ~200 KB.

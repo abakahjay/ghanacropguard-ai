@@ -91,7 +91,8 @@ The values above illustrate the shape only.
 - Decompression-bomb guard (`CROPGUARD_MAX_IMAGE_PIXELS`).
 - Rate limit per user (`CROPGUARD_RATE_LIMIT_PREDICTIONS_PER_MINUTE`, default 20) → `429` with `Retry-After`.
 - If the model bundle is missing or fails its hash check the API returns **`503 model_unavailable`** and records a failed request. It never returns a placeholder prediction.
+- **Leaf check.** Bundles exported with a leaf check (`meta.leaf_gate`) score every photo for "is this a crop leaf at all?". Below the threshold the API answers **`422 not_a_leaf`** (no `fields`), records a failed request and does not store the photo. The web and mobile apps show a toast asking for a leaf photo. The threshold and its measured rates are in `GET /model/info` → `leaf_gate`.
 
 ## Status codes
 
-`200/201` ok · `204` deleted · `400` bad input · `401` not signed in / expired · `403` not allowed (non-admin) · `404` not found (also for other users' records) · `409` email taken · `413` too large · `415` wrong type · `422` validation · `429` rate limited · `503` model unavailable.
+`200/201` ok · `204` deleted · `400` bad input · `401` not signed in / expired · `403` not allowed (non-admin) · `404` not found (also for other users' records) · `409` email taken · `413` too large · `415` wrong type · `422` validation, or `not_a_leaf` · `429` rate limited · `503` model unavailable.
