@@ -29,7 +29,7 @@ npx eas-cli@latest submit -p android                       # optional: upload to
 ## Build the Android APK on Windows (no EAS)
 `scripts\dev.ps1 -Stage mobile-apk` does all of it and writes `mobile\dist\GhanaCropGuard.apk`:
 1. `npx expo prebuild -p android --clean` with `EXPO_PUBLIC_API_URL=https://fullbackendd.onrender.com` (HTTPS only; `ALLOW_HTTP` unset).
-2. `gradlew assembleRelease` with Android Studio's JDK (`jbr`) for armeabi-v7a, arm64-v8a and x86_64 (phones, BlueStacks, the emulator). React Native's Java/Kotlin and C++ (Hermes, the new architecture) are compiled here; the first build downloads the NDK and build tools.
+2. `gradlew assembleRelease` with Android Studio's JDK (`jbr`) for armeabi-v7a, arm64-v8a and x86_64 (phones, BlueStacks, the emulator). React Native's Java/Kotlin and C++ (Hermes, the new architecture) are compiled here; the first build downloads the NDK and build tools. The C++ step writes paths longer than Windows' 260-character limit, so it needs Windows long paths enabled (`LongPathsEnabled=1`) **and** ninja 1.12 or newer: replace `%LOCALAPPDATA%\Android\Sdk\cmake\3.22.1\bin\ninja.exe` (1.10) with ninja 1.12.1 from github.com/ninja-build/ninja/releases (the stage checks). It also builds from a mirrored copy in `C:\gcg-build` to keep paths shorter.
 3. `apksigner` re-signs it with the release key in `%USERPROFILE%\.android-keys\ghanacropguard-release.jks` (password in the `.properties` file next to it). **Back both files up**: Android only installs updates signed with the same key. Never commit them.
 
 Publish it as the `GhanaCropGuard.apk` asset of a GitHub Release; the website's **Get the app** page links to `releases/latest/download/GhanaCropGuard.apk`.

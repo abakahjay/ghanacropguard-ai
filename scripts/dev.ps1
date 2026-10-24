@@ -92,11 +92,25 @@ switch ($Stage) {
     try {
       $env:CI = "1"; npx expo prebuild -p android --clean --no-install; Remove-Item Env:CI
       if ($LASTEXITCODE -ne 0) { throw "expo prebuild failed" }
-      Push-Location android
       # Some modules ask for a Java 17 toolchain; use installed JDKs instead of a slow auto-download.
       $jdks = Join-Path $env:APPDATA "Code\User\globalStorage\pleiades.java-extension-pack-jdk\java"
       $toolchains = @("17", "21") | ForEach-Object { Join-Path $jdks $_ } | Where-Object { Test-Path $_ }
       $tc = if ($toolchains) { @("-Porg.gradle.java.installations.paths=$($toolchains -join ',')") } else { @() }
+      # The C++ build fails past Windows' 260-character path limit from this deep folder (a subst
+      # drive does not help: Node resolves it back), so build from a short copy. robocopy only
+      # copies what changed after the first run.
+      $build = Join-Path $env:SystemDrive "gcg-build"
+      # Object paths still pass 260 characters; Windows long paths (LongPathsEnabled=1) plus
+      # ninja >= 1.12 handle them. The SDK's CMake 3.22.1 ships ninja 1.10, which does not.
+      $ninja = Get-ChildItem (Join-Path $env:ANDROID_HOME "cmake\*\bin\ninja.exe") | Select-Object -First 1
+      if ($ninja -and [version](& $ninja.FullName --version) -lt [version]"1.12") {
+        throw "$($ninja.FullName) is too old for long paths: replace it with ninja 1.12+ (github.com/ninja-build/ninja/releases)"
+      }
+      # Exclude only Android's own outputs: packages in node_modules ship compiled "build" folders.
+      robocopy $Mobile $build /MIR /XD .cxx .gradle .expo (Join-Path $Mobile "android\app\build") `
+        (Join-Path $Mobile "android\build") (Join-Path $Mobile "dist") /NFL /NDL /NJH /NJS /NP /MT:16 | Out-Null
+      if ($LASTEXITCODE -ge 8) { throw "robocopy to $build failed" }
+      Push-Location (Join-Path $build "android")
       try { .\gradlew.bat assembleRelease "-PreactNativeArchitectures=armeabi-v7a,arm64-v8a,x86_64" @tc --no-daemon }
       finally { Pop-Location }
       if ($LASTEXITCODE -ne 0) { throw "Gradle build failed" }
@@ -105,7 +119,7 @@ switch ($Stage) {
       $apk = Join-Path $Mobile "dist\GhanaCropGuard.apk"
       & (Join-Path $tools.FullName "apksigner.bat") sign --ks $key.storeFile --ks-key-alias $key.alias `
         --ks-pass "pass:$($key.password)" --key-pass "pass:$($key.password)" --out $apk `
-        "android\app\build\outputs\apk\release\app-release.apk"
+        (Join-Path $build "android\app\build\outputs\apk\release\app-release.apk")
       if ($LASTEXITCODE -ne 0) { throw "apksigner failed" }
       & (Join-Path $tools.FullName "apksigner.bat") verify --print-certs $apk | Select-Object -First 2
       Write-Host "APK: $apk ($([math]::Round((Get-Item $apk).Length / 1MB, 1)) MB)" -ForegroundColor Green
