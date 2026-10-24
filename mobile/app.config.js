@@ -9,7 +9,8 @@ module.exports = ({ config }) => ({
   name: "GhanaCropGuard AI",
   slug: "ghanacropguard-ai",
   scheme: "ghanacropguard",
-  version: "1.0.0",
+  // Bump both for every Android release, then update web/public/app-version.json (in-app updates).
+  version: "1.1.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
   userInterfaceStyle: "dark",
@@ -21,6 +22,9 @@ module.exports = ({ config }) => ({
   },
   android: {
     package: "org.ghanacropguard.app",
+    versionCode: 2,
+    // In-app updates: the app downloads the new APK and opens Android's installer (src/lib/appUpdate.js).
+    permissions: ["android.permission.REQUEST_INSTALL_PACKAGES"],
     adaptiveIcon: {
       backgroundColor: "#0b120d",
       foregroundImage: "./assets/android-icon-foreground.png",

@@ -95,7 +95,6 @@ switch ($Stage) {
       # Some modules ask for a Java 17 toolchain; use installed JDKs instead of a slow auto-download.
       $jdks = Join-Path $env:APPDATA "Code\User\globalStorage\pleiades.java-extension-pack-jdk\java"
       $toolchains = @("17", "21") | ForEach-Object { Join-Path $jdks $_ } | Where-Object { Test-Path $_ }
-      $tc = if ($toolchains) { @("-Porg.gradle.java.installations.paths=$($toolchains -join ',')") } else { @() }
       # The C++ build fails past Windows' 260-character path limit from this deep folder (a subst
       # drive does not help: Node resolves it back), so build from a short copy. robocopy only
       # copies what changed after the first run.
@@ -110,8 +109,18 @@ switch ($Stage) {
       robocopy $Mobile $build /MIR /XD .cxx .gradle .expo (Join-Path $Mobile "android\app\build") `
         (Join-Path $Mobile "android\build") (Join-Path $Mobile "dist") /NFL /NDL /NJH /NJS /NP /MT:16 | Out-Null
       if ($LASTEXITCODE -ge 8) { throw "robocopy to $build failed" }
+      # Settings go into the copy's gradle.properties, not the command line: gradlew.bat runs in
+      # cmd, which splits arguments at commas ("Task '-' not found").
+      $props = Join-Path $build "android\gradle.properties"
+      $lines = Get-Content $props | Where-Object { $_ -notmatch '^(reactNativeArchitectures|org\.gradle\.java\.installations\.(paths|auto-download))=' }
+      $lines += "reactNativeArchitectures=armeabi-v7a,arm64-v8a,x86_64"
+      if ($toolchains) {
+        $lines += "org.gradle.java.installations.paths=$(($toolchains | ForEach-Object { $_ -replace '\\', '/' }) -join ',')"
+        $lines += "org.gradle.java.installations.auto-download=false"
+      }
+      Set-Content -Path $props -Value $lines -Encoding ascii
       Push-Location (Join-Path $build "android")
-      try { .\gradlew.bat assembleRelease "-PreactNativeArchitectures=armeabi-v7a,arm64-v8a,x86_64" @tc --no-daemon }
+      try { .\gradlew.bat assembleRelease --no-daemon }
       finally { Pop-Location }
       if ($LASTEXITCODE -ne 0) { throw "Gradle build failed" }
       $tools = Get-ChildItem (Join-Path $env:ANDROID_HOME "build-tools") | Sort-Object Name | Select-Object -Last 1

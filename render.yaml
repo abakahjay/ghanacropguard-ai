@@ -51,3 +51,7 @@ services:
       - path: /sw.js
         name: Cache-Control
         value: no-cache
+      # The Android app reads this on every launch to offer in-app updates.
+      - path: /app-version.json
+        name: Cache-Control
+        value: no-cache

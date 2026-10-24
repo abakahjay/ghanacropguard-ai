@@ -21,6 +21,14 @@ export function DownloadPage() {
   const [kind] = useState(device);
   const [installEvent, setInstallEvent] = useState(null);
   const [installed, setInstalled] = useState(false);
+  // Same file the Android app checks for in-app updates (public/app-version.json).
+  const [apk, setApk] = useState(null);
+  useEffect(() => {
+    fetch("/app-version.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j?.android && setApk(j.android))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const onPrompt = (e) => {
@@ -50,12 +58,14 @@ export function DownloadPage() {
         Android phone
       </h2>
       <p className="max-w-[56ch] text-[16px] text-ink-2">
-        Download the app file (about 60 MB), open it, and allow your browser to install apps when Android asks. It
-        works on Android 7 and newer and uses about 200 KB of data per photo you check.
+        Download the app file{apk?.size ? ` (${apk.size})` : ""}, open it, and allow your browser to install apps when
+        Android asks. It works on Android 7 and newer, uses about 200 KB of data per photo you check, and updates
+        itself: it tells you when a new version is out.
       </p>
       <a href={APK_URL} className="btn btn-accent justify-self-start" rel="noopener">
         Download for Android (.apk)
       </a>
+      {apk?.versionName && <p className="text-[14px] text-muted">Version {apk.versionName}</p>}
       <p className="text-[14px] text-muted">
         Not on the Play Store yet, so Android shows a warning for apps from outside the store. The file comes
         straight from this project&apos;s release page on GitHub.

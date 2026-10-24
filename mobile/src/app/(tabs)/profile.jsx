@@ -1,8 +1,11 @@
+import * as Application from "expo-application";
 import { router } from "expo-router";
 import { useState } from "react";
 import { Alert, ScrollView, TextInput, View } from "react-native";
 
+import { useAppUpdate } from "@/components/AppUpdate";
 import { ServerAddress } from "@/components/ServerAddress";
+import { useToast } from "@/components/Toast";
 import { Button, Card, Field, T } from "@/components/ui";
 import { api } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
@@ -13,6 +16,16 @@ export default function Profile() {
   const [name, setName] = useState(user?.full_name ?? "");
   const [msg, setMsg] = useState(null);
   const [pw, setPw] = useState("");
+  const { supported: canUpdate, checkNow } = useAppUpdate();
+  const toast = useToast();
+  const [checking, setChecking] = useState(false);
+
+  async function checkUpdates() {
+    setChecking(true);
+    const r = await checkNow();
+    setChecking(false);
+    if (!r) toast("You have the latest version of GhanaCropGuard.");
+  }
 
   async function run(fn, ok) {
     setMsg(null);
@@ -126,6 +139,14 @@ export default function Profile() {
 
       <View style={{ gap: 10 }}>
         <ServerAddress />
+        <Card>
+          <T variant="head" accessibilityRole="header">App</T>
+          <T variant="muted" style={{ fontSize: 15 }}>
+            Version {Application.nativeApplicationVersion ?? "–"}
+            {Application.nativeBuildVersion ? ` (build ${Application.nativeBuildVersion})` : ""}
+          </T>
+          {canUpdate && <Button kind="quiet" title="Check for updates" busy={checking} onPress={checkUpdates} />}
+        </Card>
         <Button
           kind="quiet"
           title="Sign out"
