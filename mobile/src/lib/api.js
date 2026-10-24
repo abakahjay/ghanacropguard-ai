@@ -84,18 +84,26 @@ export async function api(path, init = {}, timeoutMs = 20000) {
   const headers = new Headers(init.headers);
   if (token) headers.set("Authorization", `Bearer ${token}`);
   if (init.body && typeof init.body === "string") headers.set("Content-Type", "application/json");
+  // The timeout covers reading the body too: a connection that dies mid-response (the server
+  // restarting, a dropped mobile signal) otherwise leaves r.json() waiting forever.
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   let r;
+  let body = null;
   try {
     r = await fetch(`${baseUrl}${API_PREFIX}${path}`, { ...init, headers, signal: ctrl.signal });
+    if (r.status === 204) return undefined;
+    const text = await r.text();
+    try {
+      body = text ? JSON.parse(text) : null;
+    } catch {
+      body = null;
+    }
   } catch {
     throw new ApiError(0, "network", FRIENDLY[0]);
   } finally {
     clearTimeout(timer);
   }
-  if (r.status === 204) return undefined;
-  const body = await r.json().catch(() => null);
   if (!r.ok) {
     if (r.status === 401 && token) onUnauthorized?.();
     throw toError(r.status, body);

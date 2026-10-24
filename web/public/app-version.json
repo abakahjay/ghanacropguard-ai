@@ -1,13 +1,13 @@
 {
   "android": {
-    "versionCode": 2,
-    "versionName": "1.1.0",
-    "url": "https://github.com/abakahjay/ghanacropguard-ai/releases/download/v1.1.0/GhanaCropGuard.apk",
+    "versionCode": 3,
+    "versionName": "1.1.1",
+    "url": "https://github.com/abakahjay/ghanacropguard-ai/releases/download/v1.1.1/GhanaCropGuard.apk",
     "size": "61 MB",
     "notes": [
+      "Sign-in and other requests no longer hang when the connection drops; you get a message and can try again.",
       "Photos that are not crop leaves are refused with a message asking for a leaf photo.",
-      "Updates install from inside the app: Profile → Check for updates.",
-      "Reads well on tablets and with large text."
+      "Updates install from inside the app: Profile → Check for updates."
     ]
   }
 }

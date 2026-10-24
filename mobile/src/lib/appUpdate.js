@@ -48,12 +48,16 @@ export function newerRelease(manifest, currentCode) {
 export async function checkForUpdate() {
   const current = installedVersionCode();
   if (current == null) return null;
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 15000);
   try {
-    const res = await fetch(`${versionUrl()}?t=${Date.now()}`, { headers: { Accept: "application/json" } });
+    const res = await fetch(`${versionUrl()}?t=${Date.now()}`, { headers: { Accept: "application/json" }, signal: ctrl.signal });
     if (!res.ok) return null;
     return newerRelease(await res.json(), current);
   } catch {
     return null; // offline or the site is asleep: try again next launch
+  } finally {
+    clearTimeout(timer);
   }
 }
 
