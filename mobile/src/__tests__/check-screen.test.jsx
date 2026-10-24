@@ -1,7 +1,9 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react-native";
 import * as ImagePicker from "expo-image-picker";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import CheckScreen from "@/app/(tabs)/index";
+import { ToastProvider } from "@/components/Toast";
 import * as api from "@/lib/api";
 import * as image from "@/lib/image";
 
@@ -88,4 +90,24 @@ test("network failure during upload shows the message and retries", async () => 
   await fireEvent.press(screen.getByText("Try again"));
   await waitFor(() => expect(mockPush).toHaveBeenCalledWith("/result/pred-9"));
   expect(up).toHaveBeenCalledTimes(2);
+});
+
+test("a photo that is not a leaf shows a toast asking for a leaf, with no result", async () => {
+  ImagePicker.launchImageLibraryAsync.mockResolvedValue({ canceled: false, assets: [asset] });
+  jest
+    .spyOn(api, "uploadPrediction")
+    .mockRejectedValueOnce(new api.ApiError(422, "not_a_leaf", "This doesn't look like a leaf."));
+  const metrics = { frame: { x: 0, y: 0, width: 360, height: 640 }, insets: { top: 0, left: 0, right: 0, bottom: 0 } };
+  await render(
+    <SafeAreaProvider initialMetrics={metrics}>
+      <ToastProvider>
+        <CheckScreen />
+      </ToastProvider>
+    </SafeAreaProvider>,
+  );
+  await fireEvent.press(screen.getByText("Choose from gallery"));
+  await fireEvent.press(await screen.findByText("Check this leaf"));
+  expect(await screen.findByText(/Please upload a photo of a leaf/)).toBeTruthy();
+  expect(screen.getByText("Take photo")).toBeTruthy(); // back to the start, ready for another photo
+  expect(mockPush).not.toHaveBeenCalled();
 });

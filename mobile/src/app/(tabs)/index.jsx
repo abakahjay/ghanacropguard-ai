@@ -4,6 +4,7 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { Linking, ScrollView, StyleSheet, View } from "react-native";
 
+import { useToast } from "@/components/Toast";
 import { Banner, Button, Card, OfflineBanner, T } from "@/components/ui";
 import { uploadPrediction } from "@/lib/api";
 import { compressForUpload, formatBytes } from "@/lib/image";
@@ -11,6 +12,7 @@ import { column, colors, radius } from "@/lib/theme";
 
 export default function CheckScreen() {
   const [stage, setStage] = useState({ kind: "empty" });
+  const toast = useToast();
 
   async function pick(source) {
     try {
@@ -60,7 +62,15 @@ export default function CheckScreen() {
         setStage({ kind: "empty" });
         router.push(`/result/${p.id}`);
       })
-      .catch((e) => setStage({ kind: "error", uri: s.uri, message: e.message, retry: () => upload(s) }));
+      .catch((e) => {
+        if (e.code === "not_a_leaf") {
+          // The model can only judge crop leaves: ask for one instead of showing a made-up result.
+          toast("Please upload a photo of a leaf. That photo doesn't look like a cashew, cassava, maize or tomato leaf.");
+          setStage({ kind: "empty" });
+          return;
+        }
+        setStage({ kind: "error", uri: s.uri, message: e.message, retry: () => upload(s) });
+      });
   }
 
   const preview = "uri" in stage ? stage.uri : undefined;

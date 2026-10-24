@@ -11,6 +11,7 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import { ToastProvider } from "@/components/Toast";
 import { AuthProvider, useAuth } from "@/lib/auth";
 import { colors, font } from "@/lib/theme";
 
@@ -49,7 +50,9 @@ export default function Layout() {
     <SafeAreaProvider>
       <StatusBar style="light" />
       <AuthProvider>
-        <Root />
+        <ToastProvider>
+          <Root />
+        </ToastProvider>
       </AuthProvider>
     </SafeAreaProvider>
   );
