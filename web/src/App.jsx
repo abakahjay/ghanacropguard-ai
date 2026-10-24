@@ -1,6 +1,7 @@
 import { Component, useEffect } from "react";
 import { Route, Switch, useLocation } from "wouter";
 
+import { ToastProvider } from "@/components/Toast";
 import { AuthProvider, Protected } from "@/lib/auth";
 import { AdminPage } from "@/pages/Admin";
 import { AppHome } from "@/pages/AppHome";
@@ -37,51 +38,53 @@ function ScrollToTop() {
 export function App() {
   return (
     <AuthProvider>
-      <ErrorBoundary>
-        <ScrollToTop />
-        <Switch>
-          <Route path="/" component={Landing} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/register" component={RegisterPage} />
-          <Route path="/forgot-password" component={ForgotPasswordPage} />
-          <Route path="/reset-password" component={ResetPasswordPage} />
-          <Route path="/auth/google" component={GoogleCallbackPage} />
-          <Route path="/download" component={DownloadPage} />
-          <Route path="/crops" component={CropsPage} />
-          <Route path="/crops/:crop" component={CropPage} />
-          <Route path="/limitations" component={LimitationsPage} />
-          <Route path="/privacy" component={PrivacyPage} />
-          <Route path="/terms" component={TermsPage} />
-          <Route path="/app">
-            <Protected>
-              <AppHome />
-            </Protected>
-          </Route>
-          <Route path="/app/history">
-            <Protected>
-              <HistoryPage />
-            </Protected>
-          </Route>
-          <Route path="/app/profile">
-            <Protected>
-              <ProfilePage />
-            </Protected>
-          </Route>
-          <Route path="/app/results/:id">
-            {(params) => (
+      <ToastProvider>
+        <ErrorBoundary>
+          <ScrollToTop />
+          <Switch>
+            <Route path="/" component={Landing} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/register" component={RegisterPage} />
+            <Route path="/forgot-password" component={ForgotPasswordPage} />
+            <Route path="/reset-password" component={ResetPasswordPage} />
+            <Route path="/auth/google" component={GoogleCallbackPage} />
+            <Route path="/download" component={DownloadPage} />
+            <Route path="/crops" component={CropsPage} />
+            <Route path="/crops/:crop" component={CropPage} />
+            <Route path="/limitations" component={LimitationsPage} />
+            <Route path="/privacy" component={PrivacyPage} />
+            <Route path="/terms" component={TermsPage} />
+            <Route path="/app">
               <Protected>
-                <ResultPage id={params.id} />
+                <AppHome />
               </Protected>
-            )}
-          </Route>
-          <Route path="/admin">
-            <Protected admin>
-              <AdminPage />
-            </Protected>
-          </Route>
-          <Route component={NotFound} />
-        </Switch>
-      </ErrorBoundary>
+            </Route>
+            <Route path="/app/history">
+              <Protected>
+                <HistoryPage />
+              </Protected>
+            </Route>
+            <Route path="/app/profile">
+              <Protected>
+                <ProfilePage />
+              </Protected>
+            </Route>
+            <Route path="/app/results/:id">
+              {(params) => (
+                <Protected>
+                  <ResultPage id={params.id} />
+                </Protected>
+              )}
+            </Route>
+            <Route path="/admin">
+              <Protected admin>
+                <AdminPage />
+              </Protected>
+            </Route>
+            <Route component={NotFound} />
+          </Switch>
+        </ErrorBoundary>
+      </ToastProvider>
     </AuthProvider>
   );
 }

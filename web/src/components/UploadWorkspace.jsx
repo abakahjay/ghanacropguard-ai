@@ -2,12 +2,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 
+import { useToast } from "@/components/Toast";
 import { compressImage, formatBytes, uploadPrediction } from "@/lib/client";
 
 const ACCEPT = "image/jpeg,image/png,image/webp,image/heic,image/heif";
 
 export function UploadWorkspace() {
   const [, navigate] = useLocation();
+  const toast = useToast();
   const cameraRef = useRef(null);
   const galleryRef = useRef(null);
   const [stage, setStage] = useState({ kind: "empty" });
@@ -57,6 +59,12 @@ export function UploadWorkspace() {
       });
       navigate(`/app/results/${body.id}`);
     } catch (e) {
+      if (e.code === "not_a_leaf") {
+        // The model can only judge crop leaves: ask for one instead of showing a made-up result.
+        toast("Please upload a photo of a leaf. That photo doesn't look like a cashew, cassava, maize or tomato leaf.");
+        setStage({ kind: "empty" });
+        return;
+      }
       if (e.status === 401) {
         // The auth handler is already sending the user to sign in; don't leave a spinner meanwhile.
         setStage({ kind: "error", url: s.url, message: e.message });
