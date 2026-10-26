@@ -2,10 +2,13 @@ import { Link } from "wouter";
 import { useEffect, useRef, useState } from "react";
 
 import { ConfidenceBars } from "@/components/ConfidenceBars";
+import { RotatingWords } from "@/components/RotatingWords";
 import { datasetSummary } from "@/lib/samples";
 
 const CROP_NAME = { cashew: "Cashew", cassava: "Cassava", maize: "Maize", tomato: "Tomato" };
 const ADVANCE_MS = 6000;
+// The headline names each crop the model knows in turn, starting from the plain "leaf.".
+const HERO_LEAVES = ["leaf.", ...Object.values(CROP_NAME).map((name) => `${name.toLowerCase()} leaf.`)];
 
 /*
   Hero: the claim and the action on the left, and on the right real CCMT test photos with the
@@ -24,7 +27,9 @@ export function HeroReel({ samples }) {
           id="hero-h"
           className="text-[clamp(32px,8.4vw,48px)] font-normal leading-[1.02] tracking-[-0.035em] lg:text-[clamp(40px,3.9vw,64px)]"
         >
-          <span className="block">Photograph the leaf.</span>
+          <span className="block">
+            Photograph the <RotatingWords words={HERO_LEAVES} />
+          </span>
           <span className="block text-ink-2">See what&apos;s wrong.</span>
         </h1>
         <p className="max-w-[46ch] text-[17px] leading-[1.55] text-ink lg:text-[19px]">

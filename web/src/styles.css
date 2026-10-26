@@ -141,6 +141,12 @@ body {
 .js .reveal:not(.in) { opacity: 0; transform: translateY(24px); }
 .js .reveal { transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out); }
 
+/* Rotating hero word (components/RotatingWords.jsx): one grid cell, masked vertical swap. */
+.rotating-words { display: inline-grid; vertical-align: bottom; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; }
+.rotating-words > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(105%); transition: transform .7s cubic-bezier(.65, 0, .35, 1), opacity .7s ease; }
+.rotating-words > span.is-active { opacity: 1; transform: none; }
+.rotating-words > span.is-leaving { transform: translateY(-105%); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .js .reveal:not(.in) { opacity: 1; transform: none; }
